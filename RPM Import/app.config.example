@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="RPM_Import.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <RPM_Import.Properties.Settings>
+            <setting name="RPMConnectionString" serializeAs="String">
+                <value>Data Source=headoffice\corumhs;Initial Catalog=RPM;User ID=REDACTED;Password=REDACTED;</value>
+            </setting>
+            <setting name="DevRPMConnectionString" serializeAs="String">
+                <value>Data Source=t3400-8;Initial Catalog=RPM;User ID=REDACTED;Password=REDACTED;</value>
+            </setting>
+            <setting name="DestinationPAConnectionString" serializeAs="String">
+                <value>Data Source=tcp:sql2k1201.discountasp.net;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;</value>
+            </setting>
+            <setting name="DestinationPADevConnectionString" serializeAs="String">
+                <value>Data Source=vaderconsulting\sqlexpress;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;</value>
+            </setting>
+            <setting name="ProductImportQuery" serializeAs="String">
+                <value>SELECT DISTINCT Product.ProductID AS ProductID,
+                CAST(Product.PricingCurrent.Retail AS FLOAT) / 100 AS Price, 
+                CASE 
+                   WHEN ISNULL(ProductHierarchy.ProductValues.RRP, 0) = 0 THEN CAST(WholesalerProduct.RecRetail AS FLOAT)/ 100 
+                   ELSE CAST(ISNULL(ProductHierarchy.ProductValues.RRP, 0) AS FLOAT) / 100 
+                   END 
+               AS RecommendedPrice, 
+               Product.CosmosUPI AS UPI, 
+               Product.Description AS Name, 
+               Product.Deleted
+FROM           Product 
+               INNER JOIN ProductHierarchy.ProductValues ON Product.ProductID = ProductHierarchy.ProductValues.ProductID 
+               INNER JOIN Product.PricingCurrent ON ProductHierarchy.ProductValues.ProductID = Product.PricingCurrent.ProductID AND ProductHierarchy.ProductValues.ZoneID = Product.PricingCurrent.ZoneID 
+               INNER JOIN StoreProducts ON Product.ProductID = StoreProducts.ProductID 
+               RIGHT OUTER JOIN WholesalerProduct ON Product.CosmosUPI = WholesalerProduct.CosmosUPI AND ProductHierarchy.ProductValues.RRPSupplierID = WholesalerProduct.SupplierID
+WHERE          (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (StoreProducts.SOH &gt; 0) AND (ProductHierarchy.ProductValues.ZoneID = 0) OR
+               (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (StoreProducts.SOO &gt; 0) AND (ProductHierarchy.ProductValues.ZoneID = 0) OR
+               (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (DATEDIFF(day, CAST(StoreProducts.LastSold AS date), GETDATE()) &lt; 365) AND (ProductHierarchy.ProductValues.ZoneID = 0)               
+ORDER BY UPI</value>
+            </setting>
+            <setting name="ExistingProductSelectQuery" serializeAs="String">
+                <value>SELECT ID, UPI, Price, RecommendedPrice FROM Product</value>
+            </setting>
+            <setting name="LastCatalogueQuery" serializeAs="String">
+                <value>SELECT TOP 1 AutoSpecialsID AS ID, AutoSpecialsName AS Name FROM AutoSpecials ORDER BY AutoSpecialsID DESC</value>
+            </setting>
+            <setting name="LastKnownCatalogueQuery" serializeAs="String">
+                <value>SELECT TOP 1 ID, RPMID, Name FROM Catalog ORDER BY RPMID DESC</value>
+            </setting>
+            <setting name="SetCheckedQuery" serializeAs="String">
+                <value>Update Product SET Checked = 0</value>
+            </setting>
+        </RPM_Import.Properties.Settings>
+    </applicationSettings>
+</configuration>

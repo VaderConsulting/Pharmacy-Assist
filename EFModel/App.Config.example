@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="PAEntities" connectionString="metadata=res://*/PAModel.csdl|res://*/PAModel.ssdl|res://*/PAModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=VADERCONSULTING\SQLEXPRESS;initial catalog=SQL2012_925925_savemor;persist security info=True;user id=REDACTED;password=REDACTED;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+</configuration>

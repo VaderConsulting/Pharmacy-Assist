@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Themes>
+    <Theme ID ="1" Name ="Ocean">
+        <Colour ID="1"><Red Value="224"/><Green Value="184"/><Blue Value="61"/></Colour>
+        <Colour ID="2"><Red Value="156"/><Green Value="64"/><Blue Value="225"/></Colour>
+        <Colour ID="3"><Red Value="108"/><Green Value="186"/><Blue Value="205"/></Colour>
+        <Colour ID="4"><Red Value="218"/><Green Value="70"/><Blue Value="101"/></Colour>
+        <Colour ID="5"><Red Value="96"/><Green Value="218"/><Blue Value="73"/></Colour>
+        <Colour ID="6"><Red Value="62"/><Green Value="74"/><Blue Value="33"/></Colour>
+        <Colour ID="7"><Red Value="81"/><Green Value="44"/><Blue Value="108"/></Colour>
+        <Colour ID="8"><Red Value="196"/><Green Value="145"/><Blue Value="119"/></Colour>
+        <Colour ID="9"><Red Value="205"/><Green Value="68"/><Blue Value="172"/></Colour>
+        <Colour ID="10"><Red Value="109"/><Green Value="112"/><Blue Value="213"/></Colour>
+        <Colour ID="11"><Red Value="222"/><Green Value="98"/><Blue Value="53"/></Colour>
+        <Colour ID="12"><Red Value="199"/><Green Value="211"/><Blue Value="142"/></Colour>
+        <Colour ID="13"><Red Value="83"/><Green Value="146"/><Blue Value="55"/></Colour>
+        <Colour ID="14"><Red Value="109"/><Green Value="218"/><Blue Value="188"/></Colour>
+        <Colour ID="15"><Red Value="192"/><Green Value="165"/><Blue Value="183"/></Colour>
+        <Colour ID="16"><Red Value="88"/><Green Value="134"/><Blue Value="109"/></Colour>
+        <Colour ID="17"><Red Value="101"/><Green Value="55"/><Blue Value="38"/></Colour>
+        <Colour ID="18"><Red Value="202"/><Green Value="139"/><Blue Value="211"/></Colour>
+        <Colour ID="19"><Red Value="80"/><Green Value="94"/><Blue Value="130"/></Colour>
+        <Colour ID="20"><Red Value="109"/><Green Value="218"/><Blue Value="136"/></Colour>
+        <Colour ID="21"><Red Value="56"/><Green Value="58"/><Blue Value="61"/></Colour>
+        <Colour ID="22"><Red Value="139"/><Green Value="133"/><Blue Value="56"/></Colour>
+        <Colour ID="23"><Red Value="106"/><Green Value="40"/><Blue Value="70"/></Colour>
+        <Colour ID="24"><Red Value="193"/><Green Value="105"/><Blue Value="137"/></Colour>
+        <Colour ID="25"><Red Value="120"/><Green Value="156"/><Blue Value="214"/></Colour>
+        <Colour ID="26"><Red Value="194"/><Green Value="214"/><Blue Value="82"/></Colour>
+        <Colour ID="27"><Red Value="94"/><Green Value="49"/><Blue Value="163"/></Colour>
+        <Colour ID="28"><Red Value="198"/><Green Value="213"/><Blue Value="198"/></Colour>
+        <Colour ID="29"><Red Value="151"/><Green Value="52"/><Blue Value="40"/></Colour>
+        <Colour ID="30"><Red Value="196"/><Green Value="124"/><Blue Value="54"/></Colour>
+        <Colour ID="31"><Red Value="175"/><Green Value="228"/><Blue Value="44"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="227"/><Green Value="56"/><Blue Value="43"/></Colour>  <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID ="2" Name ="Fancy">
+        <Colour ID="1"><Red Value="121"/><Green Value="79"/><Blue Value="38"/></Colour>
+        <Colour ID="2"><Red Value="196"/><Green Value="62"/><Blue Value="231"/></Colour>
+        <Colour ID="3"><Red Value="128"/><Green Value="221"/><Blue Value="57"/></Colour>
+        <Colour ID="4"><Red Value="106"/><Green Value="159"/><Blue Value="213"/></Colour>
+        <Colour ID="5"><Red Value="138"/><Green Value="49"/><Blue Value="111"/></Colour>
+        <Colour ID="6"><Red Value="124"/><Green Value="218"/><Blue Value="161"/></Colour>
+        <Colour ID="7"><Red Value="212"/><Green Value="77"/><Blue Value="32"/></Colour>
+        <Colour ID="8"><Red Value="213"/><Green Value="212"/><Blue Value="74"/></Colour>
+        <Colour ID="9"><Red Value="106"/><Green Value="115"/><Blue Value="219"/></Colour>
+        <Colour ID="10"><Red Value="87"/><Green Value="150"/><Blue Value="56"/></Colour>
+        <Colour ID="11"><Red Value="216"/><Green Value="148"/><Blue Value="60"/></Colour>
+        <Colour ID="12"><Red Value="209"/><Green Value="203"/><Blue Value="152"/></Colour>
+        <Colour ID="13"><Red Value="198"/><Green Value="133"/><Blue Value="124"/></Colour>
+        <Colour ID="14"><Red Value="55"/><Green Value="54"/><Blue Value="48"/></Colour>
+        <Colour ID="15"><Red Value="194"/><Green Value="197"/><Blue Value="204"/></Colour>
+        <Colour ID="16"><Red Value="86"/><Green Value="138"/><Blue Value="109"/></Colour>
+        <Colour ID="17"><Red Value="215"/><Green Value="60"/><Blue Value="114"/></Colour>
+        <Colour ID="18"><Red Value="85"/><Green Value="42"/><Blue Value="139"/></Colour>
+        <Colour ID="19"><Red Value="106"/><Green Value="38"/><Blue Value="49"/></Colour>
+        <Colour ID="20"><Red Value="99"/><Green Value="113"/><Blue Value="127"/></Colour>
+        <Colour ID="21"><Red Value="88"/><Green Value="86"/><Blue Value="146"/></Colour>
+        <Colour ID="22"><Red Value="61"/><Green Value="85"/><Blue Value="35"/></Colour>
+        <Colour ID="23"><Red Value="200"/><Green Value="158"/><Blue Value="206"/></Colour>
+        <Colour ID="24"><Red Value="206"/><Green Value="60"/><Blue Value="182"/></Colour>
+        <Colour ID="25"><Red Value="151"/><Green Value="145"/><Blue Value="64"/></Colour>
+        <Colour ID="26"><Red Value="119"/><Green Value="210"/><Blue Value="208"/></Colour>
+        <Colour ID="27"><Red Value="119"/><Green Value="222"/><Blue Value="115"/></Colour>
+        <Colour ID="28"><Red Value="101"/><Green Value="55"/><Blue Value="207"/></Colour>
+        <Colour ID="29"><Red Value="61"/><Green Value="38"/><Blue Value="78"/></Colour>
+        <Colour ID="30"><Red Value="194"/><Green Value="117"/><Blue Value="222"/></Colour>
+        <Colour ID="31"><Red Value="212"/><Green Value="111"/><Blue Value="168"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="200"/><Green Value="76"/><Blue Value="69"/></Colour>   <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="3" name ="Pastel">
+        <Colour ID="1"><Red Value="96"/><Green Value="130"/><Blue Value="130"/></Colour>
+        <Colour ID="2"><Red Value="110"/><Green Value="53"/><Blue Value="218"/></Colour>
+        <Colour ID="3"><Red Value="219"/><Green Value="66"/><Blue Value="42"/></Colour>
+        <Colour ID="4"><Red Value="123"/><Green Value="224"/><Blue Value="66"/></Colour>
+        <Colour ID="5"><Red Value="216"/><Green Value="70"/><Blue Value="141"/></Colour>
+        <Colour ID="6"><Red Value="190"/><Green Value="158"/><Blue Value="66"/></Colour>
+        <Colour ID="7"><Red Value="79"/><Green Value="49"/><Blue Value="120"/></Colour>
+        <Colour ID="8"><Red Value="80"/><Green Value="37"/><Blue Value="38"/></Colour>
+        <Colour ID="9"><Red Value="215"/><Green Value="170"/><Blue Value="207"/></Colour>
+        <Colour ID="10"><Red Value="100"/><Green Value="218"/><Blue Value="139"/></Colour>
+        <Colour ID="11"><Red Value="88"/><Green Value="125"/><Blue Value="67"/></Colour>
+        <Colour ID="12"><Red Value="206"/><Green Value="162"/><Blue Value="138"/></Colour>
+        <Colour ID="13"><Red Value="119"/><Green Value="108"/><Blue Value="223"/></Colour>
+        <Colour ID="14"><Red Value="105"/><Green Value="135"/><Blue Value="200"/></Colour>
+        <Colour ID="15"><Red Value="186"/><Green Value="217"/><Blue Value="107"/></Colour>
+        <Colour ID="16"><Red Value="116"/><Green Value="213"/><Blue Value="187"/></Colour>
+        <Colour ID="17"><Red Value="125"/><Green Value="89"/><Blue Value="44"/></Colour>
+        <Colour ID="18"><Red Value="50"/><Green Value="62"/><Blue Value="39"/></Colour>
+        <Colour ID="19"><Red Value="61"/><Green Value="61"/><Blue Value="89"/></Colour>
+        <Colour ID="20"><Red Value="217"/><Green Value="82"/><Blue Value="98"/></Colour>
+        <Colour ID="21"><Red Value="126"/><Green Value="43"/><Blue Value="88"/></Colour>
+        <Colour ID="22"><Red Value="195"/><Green Value="210"/><Blue Value="154"/></Colour>
+        <Colour ID="23"><Red Value="155"/><Green Value="203"/><Blue Value="218"/></Colour>
+        <Colour ID="24"><Red Value="216"/><Green Value="125"/><Blue Value="56"/></Colour>
+        <Colour ID="25"><Red Value="209"/><Green Value="69"/><Blue Value="229"/></Colour>
+        <Colour ID="26"><Red Value="197"/><Green Value="123"/><Blue Value="204"/></Colour>
+        <Colour ID="27"><Red Value="86"/><Green Value="158"/><Blue Value="51"/></Colour>
+        <Colour ID="28"><Red Value="167"/><Green Value="110"/><Blue Value="130"/></Colour>
+        <Colour ID="29"><Red Value="147"/><Green Value="53"/><Blue Value="41"/></Colour>
+        <Colour ID="30"><Red Value="217"/><Green Value="210"/><Blue Value="58"/></Colour>
+        <Colour ID="31"><Red Value="94"/><Green Value="43"/><Blue Value="159"/></Colour>  <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="196"/><Green Value="67"/><Blue Value="180"/></Colour> <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="4" name ="Pimp">
+        <Colour ID="1"><Red Value="124"/><Green Value="220"/><Blue Value="200"/></Colour>
+        <Colour ID="2"><Red Value="166"/><Green Value="54"/><Blue Value="225"/></Colour>
+        <Colour ID="3"><Red Value="222"/><Green Value="75"/><Blue Value="52"/></Colour>
+        <Colour ID="4"><Red Value="60"/><Green Value="39"/><Blue Value="70"/></Colour>
+        <Colour ID="5"><Red Value="211"/><Green Value="210"/><Blue Value="74"/></Colour>
+        <Colour ID="6"><Red Value="111"/><Green Value="138"/><Blue Value="219"/></Colour>
+        <Colour ID="7"><Red Value="60"/><Green Value="71"/><Blue Value="30"/></Colour>
+        <Colour ID="8"><Red Value="172"/><Green Value="131"/><Blue Value="125"/></Colour>
+        <Colour ID="9"><Red Value="215"/><Green Value="72"/><Blue Value="117"/></Colour>
+        <Colour ID="10"><Red Value="217"/><Green Value="146"/><Blue Value="50"/></Colour>
+        <Colour ID="11"><Red Value="201"/><Green Value="209"/><Blue Value="148"/></Colour>
+        <Colour ID="12"><Red Value="122"/><Green Value="217"/><Blue Value="67"/></Colour>
+        <Colour ID="13"><Red Value="149"/><Green Value="55"/><Blue Value="136"/></Colour>
+        <Colour ID="14"><Red Value="94"/><Green Value="142"/><Blue Value="54"/></Colour>
+        <Colour ID="15"><Red Value="104"/><Green Value="217"/><Blue Value="136"/></Colour>
+        <Colour ID="16"><Red Value="213"/><Green Value="142"/><Blue Value="190"/></Colour>
+        <Colour ID="17"><Red Value="89"/><Green Value="43"/><Blue Value="34"/></Colour>
+        <Colour ID="18"><Red Value="86"/><Green Value="124"/><Blue Value="131"/></Colour>
+        <Colour ID="19"><Red Value="90"/><Green Value="41"/><Blue Value="160"/></Colour>
+        <Colour ID="20"><Red Value="204"/><Green Value="197"/><Blue Value="209"/></Colour>
+        <Colour ID="21"><Red Value="183"/><Green Value="121"/><Blue Value="220"/></Colour>
+        <Colour ID="22"><Red Value="142"/><Green Value="118"/><Blue Value="52"/></Colour>
+        <Colour ID="23"><Red Value="69"/><Green Value="49"/><Blue Value="122"/></Colour>
+        <Colour ID="24"><Red Value="110"/><Green Value="184"/><Blue Value="214"/></Colour>
+        <Colour ID="25"><Red Value="219"/><Green Value="72"/><Blue Value="191"/></Colour>
+        <Colour ID="26"><Red Value="133"/><Green Value="57"/><Blue Value="91"/></Colour>
+        <Colour ID="27"><Red Value="96"/><Green Value="105"/><Blue Value="149"/></Colour>
+        <Colour ID="28"><Red Value="153"/><Green Value="61"/><Blue Value="41"/></Colour>
+        <Colour ID="29"><Red Value="92"/><Green Value="143"/><Blue Value="110"/></Colour>
+        <Colour ID="30"><Red Value="50"/><Green Value="64"/><Blue Value="61"/></Colour>
+        <Colour ID="31"><Red Value="218"/><Green Value="141"/><Blue Value="107"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="101"/><Green Value="88"/><Blue Value="221"/></Colour>  <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="5" name ="Tarnish">
+        <Colour ID="1"><Red Value="111"/><Green Value="221"/><Blue Value="56"/></Colour>
+        <Colour ID="2"><Red Value="115"/><Green Value="48"/><Blue Value="213"/></Colour>
+        <Colour ID="3"><Red Value="221"/><Green Value="75"/><Blue Value="43"/></Colour>
+        <Colour ID="4"><Red Value="60"/><Green Value="66"/><Blue Value="86"/></Colour>
+        <Colour ID="5"><Red Value="209"/><Green Value="193"/><Blue Value="128"/></Colour>
+        <Colour ID="6"><Red Value="111"/><Green Value="215"/><Blue Value="210"/></Colour>
+        <Colour ID="7"><Red Value="215"/><Green Value="64"/><Blue Value="124"/></Colour>
+        <Colour ID="8"><Red Value="108"/><Green Value="123"/><Blue Value="208"/></Colour>
+        <Colour ID="9"><Red Value="111"/><Green Value="70"/><Blue Value="34"/></Colour>
+        <Colour ID="10"><Red Value="228"/><Green Value="160"/><Blue Value="55"/></Colour>
+        <Colour ID="11"><Red Value="105"/><Green Value="156"/><Blue Value="53"/></Colour>
+        <Colour ID="12"><Red Value="90"/><Green Value="40"/><Blue Value="134"/></Colour>
+        <Colour ID="13"><Red Value="202"/><Green Value="111"/><Blue Value="194"/></Colour>
+        <Colour ID="14"><Red Value="218"/><Green Value="134"/><Blue Value="140"/></Colour>
+        <Colour ID="15"><Red Value="160"/><Green Value="227"/><Blue Value="165"/></Colour>
+        <Colour ID="16"><Red Value="201"/><Green Value="166"/><Blue Value="208"/></Colour>
+        <Colour ID="17"><Red Value="202"/><Green Value="215"/><Blue Value="70"/></Colour>
+        <Colour ID="18"><Red Value="78"/><Green Value="124"/><Blue Value="115"/></Colour>
+        <Colour ID="19"><Red Value="208"/><Green Value="65"/><Blue Value="209"/></Colour>
+        <Colour ID="20"><Red Value="199"/><Green Value="203"/><Blue Value="194"/></Colour>
+        <Colour ID="21"><Red Value="45"/><Green Value="54"/><Blue Value="35"/></Colour>
+        <Colour ID="22"><Red Value="101"/><Green Value="150"/><Blue Value="191"/></Colour>
+        <Colour ID="23"><Red Value="142"/><Green Value="64"/><Blue Value="111"/></Colour>
+        <Colour ID="24"><Red Value="78"/><Green Value="103"/><Blue Value="46"/></Colour>
+        <Colour ID="25"><Red Value="107"/><Green Value="220"/><Blue Value="115"/></Colour>
+        <Colour ID="26"><Red Value="91"/><Green Value="34"/><Blue Value="42"/></Colour>
+        <Colour ID="27"><Red Value="121"/><Green Value="90"/><Blue Value="212"/></Colour>
+        <Colour ID="28"><Red Value="148"/><Green Value="119"/><Blue Value="115"/></Colour>
+        <Colour ID="29"><Red Value="167"/><Green Value="127"/><Blue Value="58"/></Colour>
+        <Colour ID="30"><Red Value="68"/><Green Value="46"/><Blue Value="96"/></Colour>
+        <Colour ID="31"><Red Value="184"/><Green Value="77"/><Blue Value="62"/></Colour>   <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="90"/><Green Value="163"/><Blue Value="113"/></Colour>  <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="6" name ="Intense">
+        <Colour ID="1"><Red Value="199"/><Green Value="80"/><Blue Value="176"/></Colour>
+        <Colour ID="2"><Red Value="94"/><Green Value="225"/><Blue Value="68"/></Colour>
+        <Colour ID="3"><Red Value="110"/><Green Value="209"/><Blue Value="215"/></Colour>
+        <Colour ID="4"><Red Value="199"/><Green Value="104"/><Blue Value="48"/></Colour>
+        <Colour ID="5"><Red Value="52"/><Green Value="53"/><Blue Value="77"/></Colour>
+        <Colour ID="6"><Red Value="76"/><Green Value="119"/><Blue Value="70"/></Colour>
+        <Colour ID="7"><Red Value="215"/><Green Value="212"/><Blue Value="60"/></Colour>
+        <Colour ID="8"><Red Value="106"/><Green Value="57"/><Blue Value="206"/></Colour>
+        <Colour ID="9"><Red Value="208"/><Green Value="172"/><Blue Value="126"/></Colour>
+        <Colour ID="10"><Red Value="103"/><Green Value="140"/><Blue Value="189"/></Colour>
+        <Colour ID="11"><Red Value="117"/><Green Value="43"/><Blue Value="42"/></Colour>
+        <Colour ID="12"><Red Value="81"/><Green Value="48"/><Blue Value="128"/></Colour>
+        <Colour ID="13"><Red Value="212"/><Green Value="65"/><Blue Value="116"/></Colour>
+        <Colour ID="14"><Red Value="112"/><Green Value="223"/><Blue Value="132"/></Colour>
+        <Colour ID="15"><Red Value="57"/><Green Value="56"/><Blue Value="33"/></Colour>
+        <Colour ID="16"><Red Value="79"/><Green Value="129"/><Blue Value="128"/></Colour>
+        <Colour ID="17"><Red Value="121"/><Green Value="119"/><Blue Value="217"/></Colour>
+        <Colour ID="18"><Red Value="212"/><Green Value="126"/><Blue Value="125"/></Colour>
+        <Colour ID="19"><Red Value="200"/><Green Value="195"/><Blue Value="211"/></Colour>
+        <Colour ID="20"><Red Value="180"/><Green Value="211"/><Blue Value="174"/></Colour>
+        <Colour ID="21"><Red Value="203"/><Green Value="140"/><Blue Value="194"/></Colour>
+        <Colour ID="22"><Red Value="217"/><Green Value="161"/><Blue Value="56"/></Colour>
+        <Colour ID="23"><Red Value="117"/><Green Value="51"/><Blue Value="93"/></Colour>
+        <Colour ID="24"><Red Value="198"/><Green Value="214"/><Blue Value="126"/></Colour>
+        <Colour ID="25"><Red Value="131"/><Green Value="93"/><Blue Value="40"/></Colour>
+        <Colour ID="26"><Red Value="204"/><Green Value="69"/><Blue Value="221"/></Colour>
+        <Colour ID="27"><Red Value="73"/><Green Value="157"/><Blue Value="53"/></Colour>
+        <Colour ID="28"><Red Value="127"/><Green Value="141"/><Blue Value="48"/></Colour>
+        <Colour ID="29"><Red Value="135"/><Green Value="114"/><Blue Value="110"/></Colour>
+        <Colour ID="30"><Red Value="217"/><Green Value="64"/><Blue Value="51"/></Colour>
+        <Colour ID="31"><Red Value="93"/><Green Value="213"/><Blue Value="167"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="161"/><Green Value="221"/><Blue Value="73"/></Colour> <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="7" name ="Shades">
+        <Colour ID="1"><Red Value="118"/><Green Value="141"/><Blue Value="226"/></Colour>
+        <Colour ID="2"><Red Value="126"/><Green Value="222"/><Blue Value="68"/></Colour>
+        <Colour ID="3"><Red Value="215"/><Green Value="72"/><Blue Value="40"/></Colour>
+        <Colour ID="4"><Red Value="58"/><Green Value="73"/><Blue Value="31"/></Colour>
+        <Colour ID="5"><Red Value="105"/><Green Value="218"/><Blue Value="183"/></Colour>
+        <Colour ID="6"><Red Value="97"/><Green Value="39"/><Blue Value="79"/></Colour>
+        <Colour ID="7"><Red Value="113"/><Green Value="48"/><Blue Value="212"/></Colour>
+        <Colour ID="8"><Red Value="199"/><Green Value="152"/><Blue Value="127"/></Colour>
+        <Colour ID="9"><Red Value="213"/><Green Value="61"/><Blue Value="107"/></Colour>
+        <Colour ID="10"><Red Value="215"/><Green Value="148"/><Blue Value="59"/></Colour>
+        <Colour ID="11"><Red Value="212"/><Green Value="211"/><Blue Value="73"/></Colour>
+        <Colour ID="12"><Red Value="97"/><Green Value="133"/><Blue Value="127"/></Colour>
+        <Colour ID="13"><Red Value="210"/><Green Value="186"/><Blue Value="208"/></Colour>
+        <Colour ID="14"><Red Value="203"/><Green Value="213"/><Blue Value="152"/></Colour>
+        <Colour ID="15"><Red Value="140"/><Green Value="78"/><Blue Value="37"/></Colour>
+        <Colour ID="16"><Red Value="91"/><Green Value="153"/><Blue Value="50"/></Colour>
+        <Colour ID="17"><Red Value="79"/><Green Value="37"/><Blue Value="121"/></Colour>
+        <Colour ID="18"><Red Value="200"/><Green Value="127"/><Blue Value="207"/></Colour>
+        <Colour ID="19"><Red Value="207"/><Green Value="68"/><Blue Value="213"/></Colour>
+        <Colour ID="20"><Red Value="111"/><Green Value="220"/><Blue Value="133"/></Colour>
+        <Colour ID="21"><Red Value="137"/><Green Value="133"/><Blue Value="59"/></Colour>
+        <Colour ID="22"><Red Value="178"/><Green Value="115"/><Blue Value="139"/></Colour>
+        <Colour ID="23"><Red Value="59"/><Green Value="69"/><Blue Value="98"/></Colour>
+        <Colour ID="24"><Red Value="199"/><Green Value="66"/><Blue Value="150"/></Colour>
+        <Colour ID="25"><Red Value="104"/><Green Value="153"/><Blue Value="195"/></Colour>
+        <Colour ID="26"><Red Value="79"/><Green Value="145"/><Blue Value="94"/></Colour>
+        <Colour ID="27"><Red Value="145"/><Green Value="211"/><Blue Value="215"/></Colour>
+        <Colour ID="28"><Red Value="102"/><Green Value="37"/><Blue Value="39"/></Colour>
+        <Colour ID="29"><Red Value="117"/><Green Value="88"/><Blue Value="209"/></Colour>
+        <Colour ID="30"><Red Value="67"/><Green Value="60"/><Blue Value="53"/></Colour>
+        <Colour ID="31"><Red Value="203"/><Green Value="90"/><Blue Value="86"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="92"/><Green Value="90"/><Blue Value="160"/></Colour> <!-- Search Alternate Background Colour--> 
+    </Theme>
+    <Theme ID="8" name ="Red Berries">
+        <Colour ID="1"><Red Value="206"/><Green Value="65"/><Blue Value="88"/></Colour>
+        <Colour ID="2"><Red Value="122"/><Green Value="217"/><Blue Value="67"/></Colour>
+        <Colour ID="3"><Red Value="105"/><Green Value="57"/><Blue Value="218"/></Colour>
+        <Colour ID="4"><Red Value="104"/><Green Value="179"/><Blue Value="204"/></Colour>
+        <Colour ID="5"><Red Value="58"/><Green Value="72"/><Blue Value="34"/></Colour>
+        <Colour ID="6"><Red Value="213"/><Green Value="146"/><Blue Value="58"/></Colour>
+        <Colour ID="7"><Red Value="102"/><Green Value="42"/><Blue Value="115"/></Colour>
+        <Colour ID="8"><Red Value="197"/><Green Value="214"/><Blue Value="131"/></Colour>
+        <Colour ID="9"><Red Value="108"/><Green Value="110"/><Blue Value="216"/></Colour>
+        <Colour ID="10"><Red Value="117"/><Green Value="53"/><Blue Value="32"/></Colour>
+        <Colour ID="11"><Red Value="186"/><Green Value="117"/><Blue Value="150"/></Colour>
+        <Colour ID="12"><Red Value="201"/><Green Value="71"/><Blue Value="187"/></Colour>
+        <Colour ID="13"><Red Value="93"/><Green Value="107"/><Blue Value="114"/></Colour>
+        <Colour ID="14"><Red Value="111"/><Green Value="221"/><Blue Value="196"/></Colour>
+        <Colour ID="15"><Red Value="91"/><Green Value="140"/><Blue Value="51"/></Colour>
+        <Colour ID="16"><Red Value="211"/><Green Value="208"/><Blue Value="62"/></Colour>
+        <Colour ID="17"><Red Value="104"/><Green Value="215"/><Blue Value="132"/></Colour>
+        <Colour ID="18"><Red Value="212"/><Green Value="75"/><Blue Value="42"/></Colour>
+        <Colour ID="19"><Red Value="109"/><Green Value="43"/><Blue Value="71"/></Colour>
+        <Colour ID="20"><Red Value="210"/><Green Value="68"/><Blue Value="138"/></Colour>
+        <Colour ID="21"><Red Value="203"/><Green Value="126"/><Blue Value="111"/></Colour>
+        <Colour ID="22"><Red Value="88"/><Green Value="142"/><Blue Value="111"/></Colour>
+        <Colour ID="23"><Red Value="54"/><Green Value="43"/><Blue Value="46"/></Colour>
+        <Colour ID="24"><Red Value="193"/><Green Value="213"/><Blue Value="200"/></Colour>
+        <Colour ID="25"><Red Value="139"/><Green Value="115"/><Blue Value="53"/></Colour>
+        <Colour ID="26"><Red Value="118"/><Green Value="141"/><Blue Value="207"/></Colour>
+        <Colour ID="27"><Red Value="203"/><Green Value="178"/><Blue Value="137"/></Colour>
+        <Colour ID="28"><Red Value="205"/><Green Value="131"/><Blue Value="211"/></Colour>
+        <Colour ID="29"><Red Value="202"/><Green Value="178"/><Blue Value="205"/></Colour>
+        <Colour ID="30"><Red Value="88"/><Green Value="47"/><Blue Value="160"/></Colour>
+        <Colour ID="31"><Red Value="60"/><Green Value="64"/><Blue Value="114"/></Colour>  <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="199"/><Green Value="69"/><Blue Value="230"/></Colour> <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="9" name ="Ochre">
+        <Colour ID="1"><Red Value="112"/><Green Value="46"/><Blue Value="73"/></Colour>
+        <Colour ID="2"><Red Value="113"/><Green Value="225"/><Blue Value="68"/></Colour>
+        <Colour ID="3"><Red Value="135"/><Green Value="57"/><Blue Value="221"/></Colour>
+        <Colour ID="4"><Red Value="111"/><Green Value="213"/><Blue Value="206"/></Colour>
+        <Colour ID="5"><Red Value="213"/><Green Value="69"/><Blue Value="30"/></Colour>
+        <Colour ID="6"><Red Value="72"/><Green Value="107"/><Blue Value="44"/></Colour>
+        <Colour ID="7"><Red Value="216"/><Green Value="180"/><Blue Value="68"/></Colour>
+        <Colour ID="8"><Red Value="127"/><Green Value="126"/><Blue Value="222"/></Colour>
+        <Colour ID="9"><Red Value="193"/><Green Value="143"/><Blue Value="124"/></Colour>
+        <Colour ID="10"><Red Value="106"/><Green Value="227"/><Blue Value="147"/></Colour>
+        <Colour ID="11"><Red Value="83"/><Green Value="119"/><Blue Value="117"/></Colour>
+        <Colour ID="12"><Red Value="209"/><Green Value="63"/><Blue Value="130"/></Colour>
+        <Colour ID="13"><Red Value="112"/><Green Value="169"/><Blue Value="213"/></Colour>
+        <Colour ID="14"><Red Value="202"/><Green Value="131"/><Blue Value="187"/></Colour>
+        <Colour ID="15"><Red Value="204"/><Green Value="77"/><Blue Value="201"/></Colour>
+        <Colour ID="16"><Red Value="205"/><Green Value="219"/><Blue Value="180"/></Colour>
+        <Colour ID="17"><Red Value="62"/><Green Value="58"/><Blue Value="35"/></Colour>
+        <Colour ID="18"><Red Value="190"/><Green Value="216"/><Blue Value="121"/></Colour>
+        <Colour ID="19"><Red Value="95"/><Green Value="43"/><Blue Value="113"/></Colour>
+        <Colour ID="20"><Red Value="120"/><Green Value="52"/><Blue Value="34"/></Colour>
+        <Colour ID="21"><Red Value="89"/><Green Value="162"/><Blue Value="54"/></Colour>
+        <Colour ID="22"><Red Value="90"/><Green Value="98"/><Blue Value="148"/></Colour>
+        <Colour ID="23"><Red Value="211"/><Green Value="126"/><Blue Value="56"/></Colour>
+        <Colour ID="24"><Red Value="81"/><Green Value="55"/><Blue Value="166"/></Colour>
+        <Colour ID="25"><Red Value="202"/><Green Value="219"/><Blue Value="63"/></Colour>
+        <Colour ID="26"><Red Value="52"/><Green Value="50"/><Blue Value="70"/></Colour>
+        <Colour ID="27"><Red Value="137"/><Green Value="113"/><Blue Value="43"/></Colour>
+        <Colour ID="28"><Red Value="92"/><Green Value="167"/><Blue Value="120"/></Colour>
+        <Colour ID="29"><Red Value="200"/><Green Value="187"/><Blue Value="205"/></Colour>
+        <Colour ID="30"><Red Value="206"/><Green Value="64"/><Blue Value="70"/></Colour>
+        <Colour ID="31"><Red Value="157"/><Green Value="153"/><Blue Value="110"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="215"/><Green Value="117"/><Blue Value="121"/></Colour> <!-- Search Alternate Background Colour-->
+    </Theme>
+    <Theme ID="10" name ="Lime">
+        <Colour ID="1"><Red Value="204"/><Green Value="200"/><Blue Value="182"/></Colour>
+        <Colour ID="2"><Red Value="95"/><Green Value="55"/><Blue Value="208"/></Colour>
+        <Colour ID="3"><Red Value="216"/><Green Value="77"/><Blue Value="43"/></Colour>
+        <Colour ID="4"><Red Value="111"/><Green Value="218"/><Blue Value="77"/></Colour>
+        <Colour ID="5"><Red Value="95"/><Green Value="36"/><Blue Value="87"/></Colour>
+        <Colour ID="6"><Red Value="55"/><Green Value="70"/><Blue Value="34"/></Colour>
+        <Colour ID="7"><Red Value="214"/><Green Value="159"/><Blue Value="52"/></Colour>
+        <Colour ID="8"><Red Value="116"/><Green Value="167"/><Blue Value="219"/></Colour>
+        <Colour ID="9"><Red Value="206"/><Green Value="61"/><Blue Value="160"/></Colour>
+        <Colour ID="10"><Red Value="117"/><Green Value="220"/><Blue Value="155"/></Colour>
+        <Colour ID="11"><Red Value="219"/><Green Value="146"/><Blue Value="113"/></Colour>
+        <Colour ID="12"><Red Value="220"/><Green Value="67"/><Blue Value="101"/></Colour>
+        <Colour ID="13"><Red Value="203"/><Green Value="216"/><Blue Value="68"/></Colour>
+        <Colour ID="14"><Red Value="109"/><Green Value="121"/><Blue Value="219"/></Colour>
+        <Colour ID="15"><Red Value="47"/><Green Value="58"/><Blue Value="75"/></Colour>
+        <Colour ID="16"><Red Value="91"/><Green Value="148"/><Blue Value="55"/></Colour>
+        <Colour ID="17"><Red Value="83"/><Green Value="140"/><Blue Value="112"/></Colour>
+        <Colour ID="18"><Red Value="202"/><Green Value="208"/><Blue Value="131"/></Colour>
+        <Colour ID="19"><Red Value="79"/><Green Value="44"/><Blue Value="139"/></Colour>
+        <Colour ID="20"><Red Value="124"/><Green Value="216"/><Blue Value="212"/></Colour>
+        <Colour ID="21"><Red Value="141"/><Green Value="109"/><Blue Value="110"/></Colour>
+        <Colour ID="22"><Red Value="202"/><Green Value="58"/><Blue Value="226"/></Colour>
+        <Colour ID="23"><Red Value="90"/><Green Value="90"/><Blue Value="145"/></Colour>
+        <Colour ID="24"><Red Value="208"/><Green Value="173"/><Blue Value="208"/></Colour>
+        <Colour ID="25"><Red Value="74"/><Green Value="39"/><Blue Value="35"/></Colour>
+        <Colour ID="26"><Red Value="141"/><Green Value="47"/><Blue Value="49"/></Colour>
+        <Colour ID="27"><Red Value="149"/><Green Value="88"/><Blue Value="38"/></Colour>
+        <Colour ID="28"><Red Value="93"/><Green Value="133"/><Blue Value="148"/></Colour>
+        <Colour ID="29"><Red Value="129"/><Green Value="124"/><Blue Value="62"/></Colour>
+        <Colour ID="30"><Red Value="196"/><Green Value="102"/><Blue Value="133"/></Colour>
+        <Colour ID="31"><Red Value="197"/><Green Value="118"/><Blue Value="192"/></Colour> <!-- Search Background Colour-->
+        <Colour ID="32"><Red Value="172"/><Green Value="95"/><Blue Value="215"/></Colour>  <!-- Search Alternate Background Colour-->
+    </Theme>
+</Themes>

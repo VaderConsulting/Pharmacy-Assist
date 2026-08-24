@@ -1,0 +1,1744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PharmacyAssist.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PharmacyAssistStoreContainer">
+          <EntitySet Name="Audit" EntityType="PharmacyAssist.Store.Audit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Brand" EntityType="PharmacyAssist.Store.Brand" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Calendar" EntityType="PharmacyAssist.Store.Calendar" store:Type="Tables" store:Schema="dbo" store:Name="Calendar">
+            <DefiningQuery>SELECT 
+      [Calendar].[ID] AS [ID], 
+      [Calendar].[EventType] AS [EventType], 
+      [Calendar].[Description] AS [Description], 
+      [Calendar].[StartDate] AS [StartDate], 
+      [Calendar].[EndDate] AS [EndDate], 
+      [Calendar].[ReminderDate] AS [ReminderDate], 
+      [Calendar].[IntervalDays] AS [IntervalDays], 
+      [Calendar].[CustomString1] AS [CustomString1], 
+      [Calendar].[CustomString2] AS [CustomString2], 
+      [Calendar].[CustomString3] AS [CustomString3], 
+      [Calendar].[CustomString4] AS [CustomString4]
+      FROM [dbo].[Calendar] AS [Calendar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Catalog" EntityType="PharmacyAssist.Store.Catalog" store:Type="Tables" store:Schema="dbo" store:Name="Catalog">
+            <DefiningQuery>SELECT 
+      [Catalog].[ID] AS [ID], 
+      [Catalog].[RPMID] AS [RPMID], 
+      [Catalog].[Name] AS [Name]
+      FROM [dbo].[Catalog] AS [Catalog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Category" EntityType="PharmacyAssist.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Certificate" EntityType="PharmacyAssist.Store.Certificate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Condition" EntityType="PharmacyAssist.Store.Condition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ConditionDocument" EntityType="PharmacyAssist.Store.ConditionDocument" store:Type="Tables" store:Schema="dbo" store:Name="ConditionDocument">
+            <DefiningQuery>SELECT 
+      [ConditionDocument].[ID] AS [ID], 
+      [ConditionDocument].[ConditionID] AS [ConditionID], 
+      [ConditionDocument].[DocumentID] AS [DocumentID]
+      FROM [dbo].[ConditionDocument] AS [ConditionDocument]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ConditionIngredient" EntityType="PharmacyAssist.Store.ConditionIngredient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Document" EntityType="PharmacyAssist.Store.Document" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EndUse" EntityType="PharmacyAssist.Store.EndUse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Event" EntityType="PharmacyAssist.Store.Event" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventCertificate" EntityType="PharmacyAssist.Store.EventCertificate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventCondition" EntityType="PharmacyAssist.Store.EventCondition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventDocument" EntityType="PharmacyAssist.Store.EventDocument" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventPermission" EntityType="PharmacyAssist.Store.EventPermission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventStore" EntityType="PharmacyAssist.Store.EventStore" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventTask" EntityType="PharmacyAssist.Store.EventTask" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventType" EntityType="PharmacyAssist.Store.EventType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ingredient" EntityType="PharmacyAssist.Store.Ingredient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Page" EntityType="PharmacyAssist.Store.Page" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Permission" EntityType="PharmacyAssist.Store.Permission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="PharmacyAssist.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCatalog" EntityType="PharmacyAssist.Store.ProductCatalog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCategory" EntityType="PharmacyAssist.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCondition" EntityType="PharmacyAssist.Store.ProductCondition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductEndUse" EntityType="PharmacyAssist.Store.ProductEndUse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductIngredient" EntityType="PharmacyAssist.Store.ProductIngredient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="PharmacyAssist.Store.Role" store:Type="Tables" store:Schema="dbo" store:Name="Role">
+            <DefiningQuery>SELECT 
+      [Role].[ID] AS [ID], 
+      [Role].[Name] AS [Name], 
+      [Role].[Description] AS [Description], 
+      [Role].[System] AS [System]
+      FROM [dbo].[Role] AS [Role]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="RolePermission" EntityType="PharmacyAssist.Store.RolePermission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Schedule" EntityType="PharmacyAssist.Store.Schedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Shelftalker" EntityType="PharmacyAssist.Store.Shelftalker" store:Type="Tables" store:Schema="dbo" store:Name="Shelftalker">
+            <DefiningQuery>SELECT 
+      [Shelftalker].[UPI] AS [UPI], 
+      [Shelftalker].[Name] AS [Name], 
+      [Shelftalker].[Shelftalker] AS [Shelftalker]
+      FROM [dbo].[Shelftalker] AS [Shelftalker]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="StockLevel" EntityType="PharmacyAssist.Store.StockLevel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Store" EntityType="PharmacyAssist.Store.Store" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SystemSettings" EntityType="PharmacyAssist.Store.SystemSettings" store:Type="Tables" store:Schema="dbo" store:Name="SystemSettings">
+            <DefiningQuery>SELECT 
+      [SystemSettings].[ID] AS [ID], 
+      [SystemSettings].[Name] AS [Name], 
+      [SystemSettings].[Value] AS [Value], 
+      [SystemSettings].[Override] AS [Override]
+      FROM [dbo].[SystemSettings] AS [SystemSettings]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Task" EntityType="PharmacyAssist.Store.Task" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaskDocument" EntityType="PharmacyAssist.Store.TaskDocument" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaskRole" EntityType="PharmacyAssist.Store.TaskRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaskStore" EntityType="PharmacyAssist.Store.TaskStore" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaskUserAccount" EntityType="PharmacyAssist.Store.TaskUserAccount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Trace" EntityType="PharmacyAssist.Store.Trace" store:Type="Tables" store:Schema="dbo" store:Name="Trace">
+            <DefiningQuery>SELECT 
+      [Trace].[ID] AS [ID], 
+      [Trace].[Timestamp] AS [Timestamp], 
+      [Trace].[Query] AS [Query]
+      FROM [dbo].[Trace] AS [Trace]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UnitOfMeasure" EntityType="PharmacyAssist.Store.UnitOfMeasure" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAccount" EntityType="PharmacyAssist.Store.UserAccount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAccountRole" EntityType="PharmacyAssist.Store.UserAccountRole" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Audit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="TableName" Type="varchar" MaxLength="50" />
+          <Property Name="FieldName" Type="varchar" MaxLength="50" />
+          <Property Name="RecordID" Type="int" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="PreviousValue" Type="varchar" MaxLength="255" />
+          <Property Name="NewValue" Type="varchar" MaxLength="255" />
+          <Property Name="ApplicationName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString1" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString2" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString3" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString4" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.Calendar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="EventType" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="ReminderDate" Type="date" />
+          <Property Name="IntervalDays" Type="int" />
+          <Property Name="CustomString1" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString2" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString3" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString4" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.Catalog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Catalog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RPMID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RPMID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="Headline" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="Saving" Type="int" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="CustomString1" Type="nvarchar(max)" />
+          <Property Name="CustomString2" Type="nvarchar(max)" />
+          <Property Name="CustomString3" Type="nvarchar(max)" />
+          <Property Name="CustomString4" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Certificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Condition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="CustomString1" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString2" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString3" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString4" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.ConditionDocument' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ConditionDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ConditionID" />
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConditionID" Type="int" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConditionIngredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConditionID" Type="int" Nullable="false" />
+          <Property Name="IngredientID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="FileName" Type="varchar" MaxLength="255" />
+          <Property Name="Path" Type="varchar(max)" />
+          <Property Name="PublicAccess" Type="bit" />
+          <Property Name="xFreeService" Type="bit" />
+          <Property Name="xTypeID" Type="int" />
+          <Property Name="xModuleOrChapterID" Type="int" />
+          <Property Name="xReferenceOrElementID" Type="int" />
+          <Property Name="Keywords" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="EndUse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CustomString1" Type="nvarchar(max)" />
+          <Property Name="CustomString2" Type="nvarchar(max)" />
+          <Property Name="CustomString3" Type="nvarchar(max)" />
+          <Property Name="CustomString4" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="OwnerUserAccountID" Type="int" Nullable="false" />
+          <Property Name="AllowTask" Type="bit" Nullable="false" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="CertificateID" Type="int" Nullable="false" />
+          <Property Name="WarningPeriod" Type="int" Nullable="false" />
+          <Property Name="Recurrance" Type="varchar" MaxLength="50" />
+          <Property Name="PresenterID" Type="int" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventCertificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="CertificateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="ConditionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="PermissionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventStore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="StoreID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventTask">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="TaskID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString1" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString2" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString3" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString4" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="CustomString1" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString2" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString3" Type="varchar" MaxLength="255" />
+          <Property Name="CustomString4" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Page">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UPI" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Recommended" Type="bit" Nullable="false" />
+          <Property Name="ScheduleID" Type="int" Nullable="false" />
+          <Property Name="Approved" Type="bit" Nullable="false" />
+          <Property Name="PrivateLabelUPI" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="RecommendedPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="InStoreOnly" Type="bit" Nullable="false" />
+          <Property Name="Limit" Type="int" Nullable="false" />
+          <Property Name="ShelfTalker" Type="bit" Nullable="false" />
+          <Property Name="BrandID" Type="int" />
+          <Property Name="Thumbnail" Type="nvarchar(max)" />
+          <Property Name="MeasureID" Type="int" />
+          <Property Name="MeasureValue" Type="real" Nullable="false" />
+          <Property Name="IngredientID" Type="int" />
+          <Property Name="Rank" Type="int" Nullable="false" />
+          <Property Name="CoreProduct" Type="bit" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="CurrentUsername" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomString1" Type="nvarchar(max)" />
+          <Property Name="CustomString2" Type="nvarchar(max)" />
+          <Property Name="CustomString3" Type="nvarchar(max)" />
+          <Property Name="CustomString4" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ProductCatalog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="CatalogID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ConditionID" Type="int" Nullable="false" />
+          <Property Name="ProductNotRecommended" Type="bit" />
+        </EntityType>
+        <EntityType Name="ProductEndUse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="EndUseID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductIngredient">
+          <Key>
+            <PropertyRef Name="IngredientID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="IngredientID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.Role' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="System" Type="bit" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="PermissionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.Shelftalker' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Shelftalker">
+          <Key>
+            <PropertyRef Name="UPI" />
+          </Key>
+          <Property Name="UPI" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Shelftalker" Type="bit" />
+        </EntityType>
+        <EntityType Name="StockLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UPI" Type="int" Nullable="false" />
+          <Property Name="StoreID" Type="int" Nullable="false" />
+          <Property Name="Stock" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Store">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RPMName" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Town" Type="varchar" MaxLength="10" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Postcode" Type="varchar" MaxLength="10" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Contact" Type="varchar" MaxLength="50" />
+          <Property Name="MapURL" Type="varchar" MaxLength="300" />
+          <Property Name="OpenMonday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseMonday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenTuesday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseTuesday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenWednesday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseWednesday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenThursday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseThursday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenFriday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseFriday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenSaturday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseSaturday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenSunday" Type="varchar" MaxLength="10" />
+          <Property Name="CloseSunday" Type="varchar" MaxLength="10" />
+          <Property Name="OpenPublicHolidays" Type="varchar" MaxLength="10" />
+          <Property Name="ClosePublicHolidays" Type="varchar" MaxLength="10" />
+          <Property Name="ShowOnWebsite" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.SystemSettings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SystemSettings">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Override" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Value" Type="varchar" MaxLength="255" />
+          <Property Name="Override" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Complete" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CompletionDate" Type="date" />
+          <Property Name="CertificateID" Type="int" Nullable="false" />
+          <Property Name="WarningPeriod" Type="int" />
+          <Property Name="Recurrance" Type="varchar" MaxLength="50" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="DueDate" Type="date" />
+          <Property Name="Mandatory" Type="bit" Nullable="false" />
+          <Property Name="CompletedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="TaskDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="int" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="Complete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskStore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="int" Nullable="false" />
+          <Property Name="StoreID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskUserAccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="int" Nullable="false" />
+          <Property Name="UserAccountID" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="255" />
+          <Property Name="Completed" Type="bit" Nullable="false" />
+          <Property Name="CompletionTimestamp" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SQL2012_925925_savemor.dbo.Trace' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Trace">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Timestamp" />
+            <PropertyRef Name="Query" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="datetime" Nullable="false" />
+          <Property Name="Query" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UnitOfMeasure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomString1" Type="nvarchar(max)" />
+          <Property Name="CustomString2" Type="nvarchar(max)" />
+          <Property Name="CustomString3" Type="nvarchar(max)" />
+          <Property Name="CustomString4" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UserAccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="150" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="ManagerID" Type="int" />
+          <Property Name="StoreID" Type="int" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="FirstLogon" Type="bit" Nullable="false" />
+          <Property Name="MustResetPassword" Type="bit" Nullable="false" />
+          <Property Name="StartPageID" Type="int" Nullable="false" />
+          <Property Name="LastLogonTimestamp" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserAccountRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccountID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PharmacyAssist" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="PAEntities">
+          <EntitySet Name="Audits" EntityType="PharmacyAssist.Audit" />
+          <EntitySet Name="Brands" EntityType="PharmacyAssist.Brand" />
+          <EntitySet Name="Calendars" EntityType="PharmacyAssist.Calendar" />
+          <EntitySet Name="Catalogs" EntityType="PharmacyAssist.Catalog" />
+          <EntitySet Name="Categories" EntityType="PharmacyAssist.Category" />
+          <EntitySet Name="Certificates" EntityType="PharmacyAssist.Certificate" />
+          <EntitySet Name="Conditions" EntityType="PharmacyAssist.Condition" />
+          <EntitySet Name="ConditionDocuments" EntityType="PharmacyAssist.ConditionDocument" />
+          <EntitySet Name="ConditionIngredients" EntityType="PharmacyAssist.ConditionIngredient" />
+          <EntitySet Name="Documents" EntityType="PharmacyAssist.Document" />
+          <EntitySet Name="EndUses" EntityType="PharmacyAssist.EndUse" />
+          <EntitySet Name="Events" EntityType="PharmacyAssist.Event" />
+          <EntitySet Name="EventCertificates" EntityType="PharmacyAssist.EventCertificate" />
+          <EntitySet Name="EventConditions" EntityType="PharmacyAssist.EventCondition" />
+          <EntitySet Name="EventDocuments" EntityType="PharmacyAssist.EventDocument" />
+          <EntitySet Name="EventPermissions" EntityType="PharmacyAssist.EventPermission" />
+          <EntitySet Name="EventStores" EntityType="PharmacyAssist.EventStore" />
+          <EntitySet Name="EventTasks" EntityType="PharmacyAssist.EventTask" />
+          <EntitySet Name="EventTypes" EntityType="PharmacyAssist.EventType" />
+          <EntitySet Name="Ingredients" EntityType="PharmacyAssist.Ingredient" />
+          <EntitySet Name="Pages" EntityType="PharmacyAssist.Page" />
+          <EntitySet Name="Permissions" EntityType="PharmacyAssist.Permission" />
+          <EntitySet Name="Products" EntityType="PharmacyAssist.Product" />
+          <EntitySet Name="ProductCatalogs" EntityType="PharmacyAssist.ProductCatalog" />
+          <EntitySet Name="ProductCategories" EntityType="PharmacyAssist.ProductCategory" />
+          <EntitySet Name="ProductConditions" EntityType="PharmacyAssist.ProductCondition" />
+          <EntitySet Name="ProductEndUses" EntityType="PharmacyAssist.ProductEndUse" />
+          <EntitySet Name="ProductIngredients" EntityType="PharmacyAssist.ProductIngredient" />
+          <EntitySet Name="Roles" EntityType="PharmacyAssist.Role" />
+          <EntitySet Name="RolePermissions" EntityType="PharmacyAssist.RolePermission" />
+          <EntitySet Name="Schedules" EntityType="PharmacyAssist.Schedule" />
+          <EntitySet Name="Shelftalkers" EntityType="PharmacyAssist.Shelftalker" />
+          <EntitySet Name="StockLevels" EntityType="PharmacyAssist.StockLevel" />
+          <EntitySet Name="Stores" EntityType="PharmacyAssist.Store" />
+          <EntitySet Name="SystemSettings" EntityType="PharmacyAssist.SystemSetting" />
+          <EntitySet Name="Tasks" EntityType="PharmacyAssist.Task" />
+          <EntitySet Name="TaskDocuments" EntityType="PharmacyAssist.TaskDocument" />
+          <EntitySet Name="TaskRoles" EntityType="PharmacyAssist.TaskRole" />
+          <EntitySet Name="TaskStores" EntityType="PharmacyAssist.TaskStore" />
+          <EntitySet Name="TaskUserAccounts" EntityType="PharmacyAssist.TaskUserAccount" />
+          <EntitySet Name="Traces" EntityType="PharmacyAssist.Trace" />
+          <EntitySet Name="UnitOfMeasures" EntityType="PharmacyAssist.UnitOfMeasure" />
+          <EntitySet Name="UserAccounts" EntityType="PharmacyAssist.UserAccount" />
+          <EntitySet Name="UserAccountRoles" EntityType="PharmacyAssist.UserAccountRole" />
+        </EntityContainer>
+        <EntityType Name="Audit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="TableName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RecordID" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PreviousValue" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="NewValue" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ApplicationName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="EventType" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="ReminderDate" Type="DateTime" Precision="0" />
+          <Property Name="IntervalDays" Type="Int32" />
+          <Property Name="CustomString1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Catalog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RPMID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RPMID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="Headline" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Saving" Type="Int32" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Certificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Condition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ConditionDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ConditionID" />
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConditionID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConditionIngredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConditionID" Type="Int32" Nullable="false" />
+          <Property Name="IngredientID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FileName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Path" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PublicAccess" Type="Boolean" />
+          <Property Name="xFreeService" Type="Boolean" />
+          <Property Name="xTypeID" Type="Int32" />
+          <Property Name="xModuleOrChapterID" Type="Int32" />
+          <Property Name="xReferenceOrElementID" Type="Int32" />
+          <Property Name="Keywords" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EndUse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <Property Name="OwnerUserAccountID" Type="Int32" Nullable="false" />
+          <Property Name="AllowTask" Type="Boolean" Nullable="false" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="CertificateID" Type="Int32" Nullable="false" />
+          <Property Name="WarningPeriod" Type="Int32" Nullable="false" />
+          <Property Name="Recurrance" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PresenterID" Type="Int32" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventCertificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="CertificateID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="ConditionID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="PermissionID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventStore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="StoreID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventTask">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Page">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UPI" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Recommended" Type="Boolean" Nullable="false" />
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" />
+          <Property Name="Approved" Type="Boolean" Nullable="false" />
+          <Property Name="PrivateLabelUPI" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="RecommendedPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="InStoreOnly" Type="Boolean" Nullable="false" />
+          <Property Name="Limit" Type="Int32" Nullable="false" />
+          <Property Name="ShelfTalker" Type="Boolean" Nullable="false" />
+          <Property Name="BrandID" Type="Int32" />
+          <Property Name="Thumbnail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MeasureID" Type="Int32" />
+          <Property Name="MeasureValue" Type="Single" Nullable="false" />
+          <Property Name="IngredientID" Type="Int32" />
+          <Property Name="Rank" Type="Int32" Nullable="false" />
+          <Property Name="CoreProduct" Type="Boolean" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentUsername" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ProductCatalog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CatalogID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ConditionID" Type="Int32" Nullable="false" />
+          <Property Name="ProductNotRecommended" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ProductEndUse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="EndUseID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductIngredient">
+          <Key>
+            <PropertyRef Name="IngredientID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="IngredientID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="System" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="PermissionID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Shelftalker">
+          <Key>
+            <PropertyRef Name="UPI" />
+          </Key>
+          <Property Name="UPI" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Shelftalker1" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="StockLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UPI" Type="Int32" Nullable="false" />
+          <Property Name="StoreID" Type="Int32" Nullable="false" />
+          <Property Name="Stock" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Store">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RPMName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Town" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Postcode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Contact" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MapURL" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="OpenMonday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseMonday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenTuesday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseTuesday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenWednesday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseWednesday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenThursday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseThursday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenFriday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseFriday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenSaturday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseSaturday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenSunday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CloseSunday" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OpenPublicHolidays" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ClosePublicHolidays" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ShowOnWebsite" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SystemSetting">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Override" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Value" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Override" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Complete" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+          <Property Name="CertificateID" Type="Int32" Nullable="false" />
+          <Property Name="WarningPeriod" Type="Int32" />
+          <Property Name="Recurrance" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="DueDate" Type="DateTime" Precision="0" />
+          <Property Name="Mandatory" Type="Boolean" Nullable="false" />
+          <Property Name="CompletedBy" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TaskDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="Complete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskStore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+          <Property Name="StoreID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskUserAccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+          <Property Name="UserAccountID" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Completed" Type="Boolean" Nullable="false" />
+          <Property Name="CompletionTimestamp" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Trace">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Timestamp" />
+            <PropertyRef Name="Query" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Query" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UnitOfMeasure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CustomString4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UserAccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ManagerID" Type="Int32" />
+          <Property Name="StoreID" Type="Int32" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="FirstLogon" Type="Boolean" Nullable="false" />
+          <Property Name="MustResetPassword" Type="Boolean" Nullable="false" />
+          <Property Name="StartPageID" Type="Int32" Nullable="false" />
+          <Property Name="LastLogonTimestamp" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserAccountRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccountID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="PharmacyAssistStoreContainer" CdmEntityContainer="PAEntities">
+          <EntitySetMapping Name="Audits">
+            <EntityTypeMapping TypeName="PharmacyAssist.Audit">
+              <MappingFragment StoreEntitySet="Audit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+                <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="PharmacyAssist.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Calendars">
+            <EntityTypeMapping TypeName="PharmacyAssist.Calendar">
+              <MappingFragment StoreEntitySet="Calendar">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="ReminderDate" ColumnName="ReminderDate" />
+                <ScalarProperty Name="IntervalDays" ColumnName="IntervalDays" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Catalogs">
+            <EntityTypeMapping TypeName="PharmacyAssist.Catalog">
+              <MappingFragment StoreEntitySet="Catalog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RPMID" ColumnName="RPMID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="PharmacyAssist.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Headline" ColumnName="Headline" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Saving" ColumnName="Saving" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Certificates">
+            <EntityTypeMapping TypeName="PharmacyAssist.Certificate">
+              <MappingFragment StoreEntitySet="Certificate">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conditions">
+            <EntityTypeMapping TypeName="PharmacyAssist.Condition">
+              <MappingFragment StoreEntitySet="Condition">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConditionDocuments">
+            <EntityTypeMapping TypeName="PharmacyAssist.ConditionDocument">
+              <MappingFragment StoreEntitySet="ConditionDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConditionIngredients">
+            <EntityTypeMapping TypeName="PharmacyAssist.ConditionIngredient">
+              <MappingFragment StoreEntitySet="ConditionIngredient">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+                <ScalarProperty Name="IngredientID" ColumnName="IngredientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="PharmacyAssist.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="PublicAccess" ColumnName="PublicAccess" />
+                <ScalarProperty Name="xFreeService" ColumnName="xFreeService" />
+                <ScalarProperty Name="xTypeID" ColumnName="xTypeID" />
+                <ScalarProperty Name="xModuleOrChapterID" ColumnName="xModuleOrChapterID" />
+                <ScalarProperty Name="xReferenceOrElementID" ColumnName="xReferenceOrElementID" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EndUses">
+            <EntityTypeMapping TypeName="PharmacyAssist.EndUse">
+              <MappingFragment StoreEntitySet="EndUse">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="PharmacyAssist.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="OwnerUserAccountID" ColumnName="OwnerUserAccountID" />
+                <ScalarProperty Name="AllowTask" ColumnName="AllowTask" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="CertificateID" ColumnName="CertificateID" />
+                <ScalarProperty Name="WarningPeriod" ColumnName="WarningPeriod" />
+                <ScalarProperty Name="Recurrance" ColumnName="Recurrance" />
+                <ScalarProperty Name="PresenterID" ColumnName="PresenterID" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventCertificates">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventCertificate">
+              <MappingFragment StoreEntitySet="EventCertificate">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="CertificateID" ColumnName="CertificateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventConditions">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventCondition">
+              <MappingFragment StoreEntitySet="EventCondition">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventDocuments">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventDocument">
+              <MappingFragment StoreEntitySet="EventDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventPermissions">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventPermission">
+              <MappingFragment StoreEntitySet="EventPermission">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventStores">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventStore">
+              <MappingFragment StoreEntitySet="EventStore">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventTasks">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventTask">
+              <MappingFragment StoreEntitySet="EventTask">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventTypes">
+            <EntityTypeMapping TypeName="PharmacyAssist.EventType">
+              <MappingFragment StoreEntitySet="EventType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ingredients">
+            <EntityTypeMapping TypeName="PharmacyAssist.Ingredient">
+              <MappingFragment StoreEntitySet="Ingredient">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="PharmacyAssist.Page">
+              <MappingFragment StoreEntitySet="Page">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="PharmacyAssist.Permission">
+              <MappingFragment StoreEntitySet="Permission">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="PharmacyAssist.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UPI" ColumnName="UPI" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Recommended" ColumnName="Recommended" />
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="Approved" ColumnName="Approved" />
+                <ScalarProperty Name="PrivateLabelUPI" ColumnName="PrivateLabelUPI" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RecommendedPrice" ColumnName="RecommendedPrice" />
+                <ScalarProperty Name="InStoreOnly" ColumnName="InStoreOnly" />
+                <ScalarProperty Name="Limit" ColumnName="Limit" />
+                <ScalarProperty Name="ShelfTalker" ColumnName="ShelfTalker" />
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+                <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+                <ScalarProperty Name="MeasureValue" ColumnName="MeasureValue" />
+                <ScalarProperty Name="IngredientID" ColumnName="IngredientID" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="CoreProduct" ColumnName="CoreProduct" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="CurrentUsername" ColumnName="CurrentUsername" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCatalogs">
+            <EntityTypeMapping TypeName="PharmacyAssist.ProductCatalog">
+              <MappingFragment StoreEntitySet="ProductCatalog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories">
+            <EntityTypeMapping TypeName="PharmacyAssist.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductConditions">
+            <EntityTypeMapping TypeName="PharmacyAssist.ProductCondition">
+              <MappingFragment StoreEntitySet="ProductCondition">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+                <ScalarProperty Name="ProductNotRecommended" ColumnName="ProductNotRecommended" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductEndUses">
+            <EntityTypeMapping TypeName="PharmacyAssist.ProductEndUse">
+              <MappingFragment StoreEntitySet="ProductEndUse">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="EndUseID" ColumnName="EndUseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductIngredients">
+            <EntityTypeMapping TypeName="PharmacyAssist.ProductIngredient">
+              <MappingFragment StoreEntitySet="ProductIngredient">
+                <ScalarProperty Name="IngredientID" ColumnName="IngredientID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="PharmacyAssist.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="System" ColumnName="System" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePermissions">
+            <EntityTypeMapping TypeName="PharmacyAssist.RolePermission">
+              <MappingFragment StoreEntitySet="RolePermission">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="PharmacyAssist.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shelftalkers">
+            <EntityTypeMapping TypeName="PharmacyAssist.Shelftalker">
+              <MappingFragment StoreEntitySet="Shelftalker">
+                <ScalarProperty Name="UPI" ColumnName="UPI" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Shelftalker1" ColumnName="Shelftalker" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockLevels">
+            <EntityTypeMapping TypeName="PharmacyAssist.StockLevel">
+              <MappingFragment StoreEntitySet="StockLevel">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UPI" ColumnName="UPI" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stores">
+            <EntityTypeMapping TypeName="PharmacyAssist.Store">
+              <MappingFragment StoreEntitySet="Store">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RPMName" ColumnName="RPMName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Town" ColumnName="Town" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="MapURL" ColumnName="MapURL" />
+                <ScalarProperty Name="OpenMonday" ColumnName="OpenMonday" />
+                <ScalarProperty Name="CloseMonday" ColumnName="CloseMonday" />
+                <ScalarProperty Name="OpenTuesday" ColumnName="OpenTuesday" />
+                <ScalarProperty Name="CloseTuesday" ColumnName="CloseTuesday" />
+                <ScalarProperty Name="OpenWednesday" ColumnName="OpenWednesday" />
+                <ScalarProperty Name="CloseWednesday" ColumnName="CloseWednesday" />
+                <ScalarProperty Name="OpenThursday" ColumnName="OpenThursday" />
+                <ScalarProperty Name="CloseThursday" ColumnName="CloseThursday" />
+                <ScalarProperty Name="OpenFriday" ColumnName="OpenFriday" />
+                <ScalarProperty Name="CloseFriday" ColumnName="CloseFriday" />
+                <ScalarProperty Name="OpenSaturday" ColumnName="OpenSaturday" />
+                <ScalarProperty Name="CloseSaturday" ColumnName="CloseSaturday" />
+                <ScalarProperty Name="OpenSunday" ColumnName="OpenSunday" />
+                <ScalarProperty Name="CloseSunday" ColumnName="CloseSunday" />
+                <ScalarProperty Name="OpenPublicHolidays" ColumnName="OpenPublicHolidays" />
+                <ScalarProperty Name="ClosePublicHolidays" ColumnName="ClosePublicHolidays" />
+                <ScalarProperty Name="ShowOnWebsite" ColumnName="ShowOnWebsite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemSettings">
+            <EntityTypeMapping TypeName="PharmacyAssist.SystemSetting">
+              <MappingFragment StoreEntitySet="SystemSettings">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Override" ColumnName="Override" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="PharmacyAssist.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Complete" ColumnName="Complete" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+                <ScalarProperty Name="CertificateID" ColumnName="CertificateID" />
+                <ScalarProperty Name="WarningPeriod" ColumnName="WarningPeriod" />
+                <ScalarProperty Name="Recurrance" ColumnName="Recurrance" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="Mandatory" ColumnName="Mandatory" />
+                <ScalarProperty Name="CompletedBy" ColumnName="CompletedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskDocuments">
+            <EntityTypeMapping TypeName="PharmacyAssist.TaskDocument">
+              <MappingFragment StoreEntitySet="TaskDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskRoles">
+            <EntityTypeMapping TypeName="PharmacyAssist.TaskRole">
+              <MappingFragment StoreEntitySet="TaskRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Complete" ColumnName="Complete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskStores">
+            <EntityTypeMapping TypeName="PharmacyAssist.TaskStore">
+              <MappingFragment StoreEntitySet="TaskStore">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskUserAccounts">
+            <EntityTypeMapping TypeName="PharmacyAssist.TaskUserAccount">
+              <MappingFragment StoreEntitySet="TaskUserAccount">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="UserAccountID" ColumnName="UserAccountID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Completed" ColumnName="Completed" />
+                <ScalarProperty Name="CompletionTimestamp" ColumnName="CompletionTimestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Traces">
+            <EntityTypeMapping TypeName="PharmacyAssist.Trace">
+              <MappingFragment StoreEntitySet="Trace">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitOfMeasures">
+            <EntityTypeMapping TypeName="PharmacyAssist.UnitOfMeasure">
+              <MappingFragment StoreEntitySet="UnitOfMeasure">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+                <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+                <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+                <ScalarProperty Name="CustomString4" ColumnName="CustomString4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAccounts">
+            <EntityTypeMapping TypeName="PharmacyAssist.UserAccount">
+              <MappingFragment StoreEntitySet="UserAccount">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="FirstLogon" ColumnName="FirstLogon" />
+                <ScalarProperty Name="MustResetPassword" ColumnName="MustResetPassword" />
+                <ScalarProperty Name="StartPageID" ColumnName="StartPageID" />
+                <ScalarProperty Name="LastLogonTimestamp" ColumnName="LastLogonTimestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAccountRoles">
+            <EntityTypeMapping TypeName="PharmacyAssist.UserAccountRole">
+              <MappingFragment StoreEntitySet="UserAccountRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserAccountID" ColumnName="UserAccountID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

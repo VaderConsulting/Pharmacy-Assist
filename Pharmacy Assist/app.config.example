@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="PharmacyAssist.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+    
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="PharmacyAssist.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <add name="SavemorEntities" connectionString="metadata=res://*/SavemorModel.csdl|res://*/SavemorModel.ssdl|res://*/SavemorModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=VADERCONSULTING\SQLEXPRESS;initial catalog=Data;persist security info=True;user id=REDACTED;password=REDACTED;multipleactiveresultsets=True;application name=EntityFramework&quot;"
+      providerName="System.Data.EntityClient" />
+    <add name="PharmacyAssist.Properties.Settings.DataConnectionString"
+      connectionString="Data Source=tcp:sql2k1201.discountasp.net;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <userSettings>
+    <PharmacyAssist.Properties.Settings>
+      <setting name="FTPUsername" serializeAs="String">
+        <value>REDACTED</value>
+      </setting>
+      <setting name="FTPPassword" serializeAs="String">
+        <value>REDACTED</value>
+      </setting>
+      <setting name="FTPHost" serializeAs="String">
+        <value>REDACTED.example</value>
+      </setting>
+      <setting name="DataPageSize" serializeAs="String">
+        <value>200</value>
+      </setting>
+      <setting name="AlwaysDownloadImages" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="SearchBrandName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchCategoryName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchConditionName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchProductDescription" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="SearchProductName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchProductUPI" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchIngredientName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchScheduleName" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="ProductDetailSize" serializeAs="String">
+        <value>915, 695</value>
+      </setting>
+      <setting name="ProductDetailPosition" serializeAs="String">
+        <value>0, 0</value>
+      </setting>
+      <setting name="ProductDetailFormPanel2Width" serializeAs="String">
+        <value>0</value>
+      </setting>
+      <setting name="SaveConditionsAgainstActiveIngredientOnly" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="DevDataConnection" serializeAs="String">
+        <value>Data Source=localhost\sqlexpress;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;</value>
+      </setting>
+      <setting name="CoreProductsOnly" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="EnableRecordPaging" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="AutoSearch" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="AutoSearchIntervalSeconds" serializeAs="String">
+        <value>2</value>
+      </setting>
+      <setting name="MultiDocumentInterface" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="RememberUsername" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="LastUsername" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="FullAudit" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="EventDuration" serializeAs="String">
+        <value>1</value>
+      </setting>
+      <setting name="EventWarningPeriod" serializeAs="String">
+        <value>14</value>
+      </setting>
+      <setting name="SearchColourThemeNumber" serializeAs="String">
+        <value>8</value>
+      </setting>
+      <setting name="UpgradeRequired" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="ShowLinkedItemCount" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="TaskWarningPeriod" serializeAs="String">
+        <value>14</value>
+      </setting>
+      <setting name="ToolbarInterface" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="EnableSpellCheck" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="MainFormSize" serializeAs="String">
+        <value>1366, 667</value>
+      </setting>
+      <setting name="MainFormPosition" serializeAs="String">
+        <value>0, 0</value>
+      </setting>
+      <setting name="SearchFormSize" serializeAs="String">
+        <value>1289, 556</value>
+      </setting>
+      <setting name="SearchFormPosition" serializeAs="String">
+        <value>0, 0</value>
+      </setting>
+      <setting name="SingleDocumentInterface" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="ToolbarOnTop" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="TaskDisplayPeriod" serializeAs="String">
+        <value>30</value>
+      </setting>
+      <setting name="ShowCompletedTasks" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="ShowTaskStoreName" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="SearchEndUse" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="LoadTaskDataOnDemand" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SearchCustomFields" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="SortMyTasksAlphabetically" serializeAs="String">
+        <value>False</value>
+      </setting>
+    </PharmacyAssist.Properties.Settings>
+  </userSettings>
+  <startup>
+    
+  <supportedRuntime version="v2.0.50727" /></startup>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+  </entityFramework>
+  <applicationSettings>
+    <PharmacyAssist.Properties.Settings>
+      <setting name="RPMConnectionString" serializeAs="String">
+        <value>Data Source=VADERCONSULTING\SQLEXPRESS;Initial Catalog=RPM;User ID=REDACTED;Password=REDACTED;</value>
+      </setting>
+    </PharmacyAssist.Properties.Settings>
+  </applicationSettings>
+</configuration>

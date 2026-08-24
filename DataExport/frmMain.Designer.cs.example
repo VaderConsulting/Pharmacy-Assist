@@ -1,0 +1,196 @@
+﻿namespace DataExport
+{
+    partial class frmMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblServer = new System.Windows.Forms.Label();
+            this.txtServer = new System.Windows.Forms.TextBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblDatabase = new System.Windows.Forms.Label();
+            this.txtDatabase = new System.Windows.Forms.TextBox();
+            this.lstTables = new System.Windows.Forms.ListBox();
+            this.lblTables = new System.Windows.Forms.Label();
+            this.btnExtract = new System.Windows.Forms.Button();
+            this.lblOutputFolder = new System.Windows.Forms.Label();
+            this.txtOutputFolder = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // lblServer
+            // 
+            this.lblServer.Location = new System.Drawing.Point(13, 16);
+            this.lblServer.Name = "lblServer";
+            this.lblServer.Size = new System.Drawing.Size(55, 17);
+            this.lblServer.TabIndex = 0;
+            this.lblServer.Text = "Server";
+            // 
+            // txtServer
+            // 
+            this.txtServer.Location = new System.Drawing.Point(84, 13);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(168, 20);
+            this.txtServer.TabIndex = 1;
+            this.txtServer.Text = "tcp:sql2k1201.discountasp.net";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.Location = new System.Drawing.Point(13, 43);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(56, 23);
+            this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(84, 40);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(168, 20);
+            this.txtUsername.TabIndex = 3;
+            this.txtUsername.Text = "REDACTED";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Location = new System.Drawing.Point(291, 45);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(53, 23);
+            this.lblPassword.TabIndex = 4;
+            this.lblPassword.Text = "Password";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(361, 42);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(168, 20);
+            this.txtPassword.TabIndex = 5;
+            this.txtPassword.Text = "REDACTED";
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // lblDatabase
+            // 
+            this.lblDatabase.Location = new System.Drawing.Point(291, 16);
+            this.lblDatabase.Name = "lblDatabase";
+            this.lblDatabase.Size = new System.Drawing.Size(63, 23);
+            this.lblDatabase.TabIndex = 6;
+            this.lblDatabase.Text = "Database";
+            // 
+            // txtDatabase
+            // 
+            this.txtDatabase.Location = new System.Drawing.Point(361, 13);
+            this.txtDatabase.Name = "txtDatabase";
+            this.txtDatabase.Size = new System.Drawing.Size(168, 20);
+            this.txtDatabase.TabIndex = 7;
+            this.txtDatabase.Text = "SQL2012_925925_savemor";
+            // 
+            // lstTables
+            // 
+            this.lstTables.FormattingEnabled = true;
+            this.lstTables.Location = new System.Drawing.Point(16, 105);
+            this.lstTables.Name = "lstTables";
+            this.lstTables.Size = new System.Drawing.Size(120, 147);
+            this.lstTables.TabIndex = 8;
+            // 
+            // lblTables
+            // 
+            this.lblTables.Location = new System.Drawing.Point(13, 79);
+            this.lblTables.Name = "lblTables";
+            this.lblTables.Size = new System.Drawing.Size(56, 23);
+            this.lblTables.TabIndex = 9;
+            this.lblTables.Text = "Tables";
+            // 
+            // btnExtract
+            // 
+            this.btnExtract.Location = new System.Drawing.Point(457, 228);
+            this.btnExtract.Name = "btnExtract";
+            this.btnExtract.Size = new System.Drawing.Size(75, 24);
+            this.btnExtract.TabIndex = 10;
+            this.btnExtract.Text = "Extract";
+            this.btnExtract.UseVisualStyleBackColor = true;
+            this.btnExtract.Click += new System.EventHandler(this.btnExtract_Click);
+            // 
+            // lblOutputFolder
+            // 
+            this.lblOutputFolder.Location = new System.Drawing.Point(142, 234);
+            this.lblOutputFolder.Name = "lblOutputFolder";
+            this.lblOutputFolder.Size = new System.Drawing.Size(100, 23);
+            this.lblOutputFolder.TabIndex = 11;
+            this.lblOutputFolder.Text = "Output Folder";
+            // 
+            // txtOutputFolder
+            // 
+            this.txtOutputFolder.Location = new System.Drawing.Point(219, 231);
+            this.txtOutputFolder.Name = "txtOutputFolder";
+            this.txtOutputFolder.Size = new System.Drawing.Size(232, 20);
+            this.txtOutputFolder.TabIndex = 12;
+            this.txtOutputFolder.Text = "C:\\Users\\Dave\\Documents\\Savemor";
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(544, 265);
+            this.Controls.Add(this.txtOutputFolder);
+            this.Controls.Add(this.lblOutputFolder);
+            this.Controls.Add(this.btnExtract);
+            this.Controls.Add(this.lblTables);
+            this.Controls.Add(this.lstTables);
+            this.Controls.Add(this.txtDatabase);
+            this.Controls.Add(this.lblDatabase);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtServer);
+            this.Controls.Add(this.lblServer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmMain";
+            this.Text = "Data Export";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblServer;
+        private System.Windows.Forms.TextBox txtServer;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblDatabase;
+        private System.Windows.Forms.TextBox txtDatabase;
+        private System.Windows.Forms.ListBox lstTables;
+        private System.Windows.Forms.Label lblTables;
+        private System.Windows.Forms.Button btnExtract;
+        private System.Windows.Forms.Label lblOutputFolder;
+        private System.Windows.Forms.TextBox txtOutputFolder;
+    }
+}
+

@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0446B300-4663-4E6E-B205-F78085E5D908}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PharmacyAssist</RootNamespace>
+    <AssemblyName>PharmacyAssist</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>supervista_networking_nurse.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET">
+      <HintPath>..\..\..\AutoUpdater Source\AutoUpdater.NET\AutoUpdater.NET\bin\Release\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpServer">
+      <HintPath>..\..\..\Zeta HTML Edit Control\References\HttpServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Owf.Controls.GradientPanel">
+      <HintPath>..\..\..\Owf.Controls.A1Panel\bin\Release\Owf.Controls.GradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="SgmlReaderDll">
+      <HintPath>..\..\..\Zeta HTML Edit Control\References\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmStockLevels-01A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockLevels-01A.Designer.cs">
+      <DependentUpon>frmStockLevels-01A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUploadDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUploadDocument.Designer.cs">
+      <DependentUpon>frmUploadDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateFolder.Designer.cs">
+      <DependentUpon>frmCreateFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentInfo-015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentInfo-015.Designer.cs">
+      <DependentUpon>frmDocumentInfo-015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTasks-010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTasks-010.Designer.cs">
+      <DependentUpon>frmTasks-010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseColumn.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogDetail-001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogDetail-001.Designer.cs">
+      <DependentUpon>frmCatalogDetail-001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogs-002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogs-002.Designer.cs">
+      <DependentUpon>frmCatalogs-002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword-003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword-003.Designer.cs">
+      <DependentUpon>frmChangePassword-003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocuments-004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocuments-004.Designer.cs">
+      <DependentUpon>frmDocuments-004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvents005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvents005.Designer.cs">
+      <DependentUpon>frmEvents005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogon-009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogon-009.Designer.cs">
+      <DependentUpon>frmLogon-009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMyTasks-00B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMyTasks-00B.Designer.cs">
+      <DependentUpon>frmMyTasks-00B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions-00C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions-00C.Designer.cs">
+      <DependentUpon>frmOptions-00C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecurrance-00E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecurrance-00E.Designer.cs">
+      <DependentUpon>frmRecurrance-00E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTheme-015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTheme-015.Designer.cs">
+      <DependentUpon>frmTheme-015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserAccounts-011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserAccounts-011.Designer.cs">
+      <DependentUpon>frmUserAccounts-011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserDetails-012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserDetails-012.Designer.cs">
+      <DependentUpon>frmUserDetails-012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWindows-014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWindows-014.Designer.cs">
+      <DependentUpon>frmWindows-014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="frmLinkedItems006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLinkedItems006.Designer.cs">
+      <DependentUpon>frmLinkedItems006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListEdit007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListEdit007.Designer.cs">
+      <DependentUpon>frmListEdit007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListItemSelection-008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListItemSelection-008.Designer.cs">
+      <DependentUpon>frmListItemSelection-008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain-013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain-013.Designer.cs">
+      <DependentUpon>frmMain-013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageLinkedItems00A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageLinkedItems00A.Designer.cs">
+      <DependentUpon>frmManageLinkedItems00A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductDetail-00D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDetail-00D.Designer.cs">
+      <DependentUpon>frmProductDetail-00D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch-00F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch-00F.Designer.cs">
+      <DependentUpon>frmSearch-00F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="ListItem.cs" />
+    <Compile Include="PredicateBuilder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmStockLevels-01A.resx">
+      <DependentUpon>frmStockLevels-01A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUploadDocument.resx">
+      <DependentUpon>frmUploadDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateFolder.resx">
+      <DependentUpon>frmCreateFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentInfo-015.resx">
+      <DependentUpon>frmDocumentInfo-015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTasks-010.resx">
+      <DependentUpon>frmTasks-010.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogDetail-001.resx">
+      <DependentUpon>frmCatalogDetail-001.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogs-002.resx">
+      <DependentUpon>frmCatalogs-002.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword-003.resx">
+      <DependentUpon>frmChangePassword-003.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocuments-004.resx">
+      <DependentUpon>frmDocuments-004.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvents005.resx">
+      <DependentUpon>frmEvents005.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogon-009.resx">
+      <DependentUpon>frmLogon-009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMyTasks-00B.resx">
+      <DependentUpon>frmMyTasks-00B.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions-00C.resx">
+      <DependentUpon>frmOptions-00C.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecurrance-00E.resx">
+      <DependentUpon>frmRecurrance-00E.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTheme-015.resx">
+      <DependentUpon>frmTheme-015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserAccounts-011.resx">
+      <DependentUpon>frmUserAccounts-011.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserDetails-012.resx">
+      <DependentUpon>frmUserDetails-012.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLinkedItems006.resx">
+      <DependentUpon>frmLinkedItems006.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListEdit007.resx">
+      <DependentUpon>frmListEdit007.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListItemSelection-008.resx">
+      <DependentUpon>frmListItemSelection-008.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain-013.resx">
+      <DependentUpon>frmMain-013.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageLinkedItems00A.resx">
+      <DependentUpon>frmManageLinkedItems00A.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDetail-00D.resx">
+      <DependentUpon>frmProductDetail-00D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch-00F.resx">
+      <DependentUpon>frmSearch-00F.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWindows-014.resx">
+      <DependentUpon>frmWindows-014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Colour Helper.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Common\Common.vbproj">
+      <Project>{1ada0af0-7ab5-4422-b254-251a960a9b28}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Compression\Compression.vbproj">
+      <Project>{9d0f3ecf-af2e-4a59-9834-0e83d3e272d8}</Project>
+      <Name>Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\FileTransfer\FileTransfer.vbproj">
+      <Project>{30a6157b-92eb-4fa5-8521-6f00255903be}</Project>
+      <Name>FileTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Logging\Logging.vbproj">
+      <Project>{b456b610-7c31-4b25-b875-4fba4c34ecdf}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\SQL\SQL.vbproj">
+      <Project>{d8187ea2-ce6f-4ec6-9ca7-74a3fa2129e9}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\File Association\FileAssociation\FileAssociation.csproj">
+      <Project>{e2ede3ed-1e9e-46d9-903e-1a8feb4b2371}</Project>
+      <Name>FileAssociation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\i00SpellCheck\Components\i00BindingList\i00BindingList.vbproj">
+      <Project>{1a3066d9-b48c-4ec1-ac93-4b0bbe5aa812}</Project>
+      <Name>i00BindingList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\i00SpellCheck\i00SpellCheck\i00SpellCheck.vbproj">
+      <Project>{27d0d9b3-719c-46b7-9f03-3f91e82e7436}</Project>
+      <Name>i00SpellCheck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Linqkit\LinqKit.csproj">
+      <Project>{aec98f52-83f5-488d-99ef-8affe7c9f6e6}</Project>
+      <Name>LinqKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RecurranceGenerator\RecurrenceGenerator\RecurrenceGenerator.csproj">
+      <Project>{cb580cb9-6597-4edb-aa6c-b44f5aed87ce}</Project>
+      <Name>RecurrenceGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj">
+      <Project>{25649f08-3046-4891-adb8-7ea787b57063}</Project>
+      <Name>System.Windows.Forms.Calendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zeta HTML Edit Control\Control\Control.csproj">
+      <Project>{b00ae765-8212-43fd-8e70-768a6c20ee93}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{7a515b50-fa79-4770-a2b6-f3c5fabac15d}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_start_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_rewind_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_fastforward_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_end_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_put.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_get.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supervista_business_bar_chart.ico" />
+    <None Include="Resources\supervista_business_bar_chart_256.png" />
+    <None Include="Resources\supervista_business_bar_chart_32.png" />
+    <None Include="Resources\supervista_business_bar_chart_16.png" />
+    <None Include="Resources\Word.png" />
+    <None Include="Resources\File_PowerPoint.png" />
+    <None Include="Resources\File_Pdf.png" />
+    <None Include="Resources\File_Excel.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\application_view_detail.png" />
+    <None Include="Resources\application_view_list.png" />
+    <None Include="Resources\application_view_tile.png" />
+    <None Include="Resources\application_view_icons.png" />
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\folder_delete.png" />
+    <None Include="Resources\database_add.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\page_copy.png" />
+    <None Include="Resources\realvista_networking_net_user_256.png" />
+    <None Include="Resources\realvista_networking_net_user_32.png" />
+    <None Include="Resources\realvista_networking_net_user_16.png" />
+    <None Include="Resources\realvista_networking_net_admin_256.png" />
+    <None Include="Resources\realvista_networking_net_admin_32.png" />
+    <None Include="Resources\realvista_networking_net_admin_16.png" />
+    <None Include="Resources\supervista_general_clock_32.png" />
+    <None Include="Resources\realvista_general_gear_32.png" />
+    <None Include="Resources\supervista_graphics_color.ico" />
+    <None Include="Resources\supervista_graphics_color_256.png" />
+    <None Include="Resources\supervista_graphics_color_32.png" />
+    <None Include="Resources\supervista_graphics_color_16.png" />
+    <None Include="Resources\xmac_general_windows_restore_32.png" />
+    <None Include="Resources\xmac_general_windows_restore_16.png" />
+    <None Include="Resources\xmac_general_windows_32.png" />
+    <None Include="Resources\xmac_general_windows_16.png" />
+    <None Include="Resources\xmac_general_window_32.png" />
+    <None Include="Resources\xmac_general_window_16.png" />
+    <None Include="Resources\xmac_general_refresh_32.png" />
+    <None Include="Resources\xmac_general_refresh_16.png" />
+    <None Include="Resources\xmac_general_printer_256.png" />
+    <None Include="Resources\xmac_general_printer_32.png" />
+    <None Include="Resources\xmac_general_printer_16.png" />
+    <None Include="Resources\xmac_general_mailbox_256.png" />
+    <None Include="Resources\xmac_general_mailbox_32.png" />
+    <None Include="Resources\xmac_general_mailbox_16.png" />
+    <None Include="Resources\xmac_general_mail_256.png" />
+    <None Include="Resources\xmac_general_mail_32.png" />
+    <None Include="Resources\xmac_general_mail_16.png" />
+    <None Include="Resources\clean_business_catalog_16.png" />
+    <None Include="Resources\supervista_medical_patient_information.ico" />
+    <None Include="Resources\realvista_medical_diagnostic.ico" />
+    <None Include="Resources\realvista_medical_diagnostic_16.png" />
+    <None Include="Resources\realvista_medical_diagnostic_256.png" />
+    <None Include="Resources\supervista_networking_nurse.ico" />
+    <None Include="Resources\windows7_general_group_32.png" />
+    <None Include="Resources\realvista_general_binoculars_32.png" />
+    <None Include="Resources\realvista_projectmanagment_project_schedule_32.png" />
+    <None Include="Resources\plasticxp_medical_allergy_vials_32.png" />
+    <None Include="Resources\realvista_projectmanagment_task_32.png" />
+    <None Include="Resources\realvista_realestate_drugstore_32.png" />
+    <None Include="Resources\vista_communications_skin_32.png" />
+    <None Include="Resources\vista_networking_role_32.png" />
+    <None Include="Resources\supervista_security_application_modules_32.png" />
+    <None Include="Resources\vista_business_meeting_32.png" />
+    <None Include="Resources\supervista_general_stats_32.png" />
+    <None Include="Resources\supervista_medical_patient_information_32.png" />
+    <None Include="Resources\supervista_general_book_32.png" />
+    <None Include="Resources\realvista_medical_diagnostic_32.png" />
+    <None Include="Resources\realvista_mobile_certificate_management_32.png" />
+    <None Include="Resources\vista_accounting_inventory_categories_32.png" />
+    <None Include="Resources\vista_business_catalog_32.png" />
+    <None Include="Resources\vista_business_brand_32.png" />
+    <None Include="Resources\vista_medical_laboratory_32.png" />
+    <None Include="Resources\realvista_general_binoculars.ico" />
+    <None Include="Resources\realvista_general_gear_16.png" />
+    <None Include="Resources\realvista_general_gear_256.png" />
+    <None Include="Resources\supervista_general_clock_16.png" />
+    <None Include="Resources\supervista_general_clock_256.png" />
+    <None Include="Resources\supervista_general_book.ico" />
+    <None Include="Resources\realvista_mobile_certificate_management.ico" />
+    <None Include="Resources\vista_accounting_inventory_categories.ico" />
+    <None Include="Resources\vista_accounting_industry.ico" />
+    <None Include="Resources\vista_business_brand.ico" />
+    <None Include="Resources\realvista_general_user.ico" />
+    <None Include="Resources\realvista_projectmanagment_task.ico" />
+    <None Include="Resources\supervista_general_clock.ico" />
+    <None Include="Resources\supervista_business_benchmarking.ico" />
+    <None Include="Resources\realvista_general_gear.ico" />
+    <None Include="Resources\realvista_projectmanagment_project_schedule.ico" />
+    <None Include="Resources\realvista_networking_login.ico" />
+    <None Include="Resources\realvista_networking_password.ico" />
+    <None Include="Resources\windows7_general_group.ico" />
+    <None Include="Resources\vista_networking_role.ico" />
+    <None Include="Resources\vista_communications_skin.ico" />
+    <None Include="Resources\vista_business_meeting.ico" />
+    <None Include="Resources\supervista_security_application_modules.ico" />
+    <None Include="Resources\supervista_general_stats.ico" />
+    <None Include="Resources\realvista_realestate_drugstore.ico" />
+    <None Include="Resources\plasticxp_medical_allergy_vials.ico" />
+    <None Include="Resources\vista_business_catalog.ico" />
+    <None Include="Resources\vista_networking_link_16.png" />
+    <None Include="Resources\vista_networking_link_256.png" />
+    <None Include="Resources\supervista_networking_link_16.png" />
+    <None Include="Resources\supervista_networking_link_256.png" />
+    <None Include="Resources\supervista_business_benchmarking_32.png" />
+    <None Include="Resources\supervista_networking_nurse_16.png" />
+    <None Include="Resources\supervista_networking_nurse_32.png" />
+    <None Include="Resources\supervista_networking_nurse_256.png" />
+    <None Include="Resources\realvista_general_button_cancel_16.png" />
+    <None Include="Resources\realvista_general_button_cancel_32.png" />
+    <None Include="Resources\realvista_general_add_16.png" />
+    <None Include="Resources\realvista_general_add_32.png" />
+    <None Include="Resources\realvista_general_chat_16.png" />
+    <None Include="Resources\realvista_general_chat_32.png" />
+    <None Include="Resources\realvista_general_chat_256.png" />
+    <None Include="Resources\realvista_general_check_mark_16.png" />
+    <None Include="Resources\realvista_general_check_mark_32.png" />
+    <None Include="Resources\realvista_general_check_mark_256.png" />
+    <None Include="Resources\realvista_general_clip_16.png" />
+    <None Include="Resources\realvista_general_clip_32.png" />
+    <None Include="Resources\realvista_general_clip_256.png" />
+    <None Include="Resources\realvista_general_close_16.png" />
+    <None Include="Resources\realvista_general_close_32.png" />
+    <None Include="Resources\realvista_general_cross_16.png" />
+    <None Include="Resources\realvista_general_cross_32.png" />
+    <None Include="Resources\realvista_general_diskette_16.png" />
+    <None Include="Resources\realvista_general_diskette_32.png" />
+    <None Include="Resources\realvista_general_fast_forward_16.png" />
+    <None Include="Resources\realvista_general_fast_forward_32.png" />
+    <None Include="Resources\realvista_general_first_16.png" />
+    <None Include="Resources\realvista_general_first_32.png" />
+    <None Include="Resources\realvista_general_last_16.png" />
+    <None Include="Resources\realvista_general_last_32.png" />
+    <None Include="Resources\realvista_general_refresh_16.png" />
+    <None Include="Resources\realvista_general_refresh_32.png" />
+    <None Include="Resources\realvista_general_reload_16.png" />
+    <None Include="Resources\realvista_general_reload_32.png" />
+    <None Include="Resources\realvista_general_rewinding_16.png" />
+    <None Include="Resources\realvista_general_rewinding_32.png" />
+    <None Include="Resources\realvista_general_up_16.png" />
+    <None Include="Resources\realvista_general_up_32.png" />
+    <None Include="Resources\realvista_general_zoom_16.png" />
+    <None Include="Resources\realvista_general_zoom_32.png" />
+    <None Include="Resources\realvista_general_zoom_256.png" />
+    <None Include="Resources\clean_business_catalog_32.png" />
+    <None Include="Resources\clean_business_catalog_256.png" />
+    <None Include="Resources\clean_business_catalog.ico" />
+    <Compile Include="supervista_networking_nurse.ico" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\yes.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\power_on.png" />
+    <None Include="Resources\power_off.png" />
+    <None Include="Resources\no.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\comment.png" />
+    <None Include="Resources\cog.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\database_table.png" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\note_edit.png" />
+    <None Include="Resources\image_add.png" />
+    <None Include="Resources\vaderconsulting_vertical.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\page_cross.png" />
+    <None Include="Resources\page_tick.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\page_white_find.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\picture_edit.png" />
+    <None Include="Resources\page_white_edit.png" />
+    <None Include="Resources\page_white_link.png" />
+    <None Include="Resources\note_activeingredients.png" />
+    <None Include="Resources\note_brands.png" />
+    <None Include="Resources\note_categories.png" />
+    <None Include="Resources\note_conditions.png" />
+    <None Include="Resources\note_enduse.png" />
+    <None Include="Resources\note_schedules.png" />
+    <None Include="Resources\note_stores.png" />
+    <None Include="Resources\note_unitsofmeasure.png" />
+    <None Include="Resources\page_white_star.png" />
+    <None Include="Resources\page_white_stack.png" />
+    <None Include="Resources\book.png" />
+    <Content Include="AutoUpdate\Releasenotes.htm" />
+    <Content Include="AutoUpdate\PharmacyAssist.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\NHS.png" />
+    <None Include="Resources\page_white_wrench.png" />
+    <None Include="Resources\nhs_activeingredients.png" />
+    <None Include="Resources\nhs_conditions.png" />
+    <None Include="Resources\google.png" />
+    <None Include="Resources\book_open.png" />
+    <None Include="Resources\book_add.png" />
+    <None Include="Resources\book_delete.png" />
+    <None Include="Resources\clock_go.png" />
+    <None Include="Resources\wikepedia.png" />
+    <None Include="Resources\note_book.png" />
+    <None Include="Resources\server_connect.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\RejectCalibration.png" />
+    <None Include="Resources\RejectQualityControl.png" />
+    <None Include="Resources\RerunCalibration.png" />
+    <None Include="Resources\RerunQualityControl.png" />
+    <None Include="Resources\RunCalibration.png" />
+    <None Include="Resources\DefinedParameters.png" />
+    <None Include="Resources\DoctorFemale.png" />
+    <None Include="Resources\DoctorMale.png" />
+    <None Include="Resources\DutyRoster.png" />
+    <None Include="Resources\FirstAidKit.png" />
+    <None Include="Resources\History.png" />
+    <None Include="Resources\Hospital.png" />
+    <None Include="Resources\KidneyDish.png" />
+    <None Include="Resources\LastThreeMonths.png" />
+    <None Include="Resources\PatientData.png" />
+    <None Include="Resources\PatientFemale.png" />
+    <None Include="Resources\PatientFile.png" />
+    <None Include="Resources\PatientMale.png" />
+    <None Include="Resources\Pills.png" />
+    <None Include="Resources\Prescription.png" />
+    <None Include="Resources\Radioactive.png" />
+    <None Include="Resources\Skalpell.png" />
+    <None Include="Resources\Stethoscope.png" />
+    <None Include="Resources\Syringe.png" />
+    <None Include="Resources\Task.png" />
+    <None Include="Resources\TestTubes.png" />
+    <None Include="Resources\Thermometer.png" />
+    <None Include="Resources\Tooth.png" />
+    <None Include="Resources\UserSetup.png" />
+    <None Include="Resources\Vial-O.png" />
+    <None Include="Resources\Vial-Pills.png" />
+    <None Include="Resources\Vial-X.png" />
+    <None Include="Resources\XRay.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\user_go.png" />
+    <None Include="Resources\user_edit.png" />
+    <None Include="Resources\user_delete.png" />
+    <None Include="Resources\user_add.png" />
+    <None Include="Resources\cog1.png" />
+    <None Include="Resources\MD.png" />
+    <Content Include="Colours.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Conditions.png" />
+    <None Include="Resources\Jigsaw piece.png" />
+    <None Include="Resources\vista_medical_laboratory_16.png" />
+    <None Include="Resources\vista_medical_laboratory_256.png" />
+    <None Include="Resources\vista_business_brand_16.png" />
+    <None Include="Resources\vista_business_brand_256.png" />
+    <None Include="Resources\vista_accounting_inventory_categories_16.png" />
+    <None Include="Resources\vista_accounting_inventory_categories_256.png" />
+    <None Include="Resources\vista_business_catalog_16.png" />
+    <None Include="Resources\vista_business_catalog_256.png" />
+    <None Include="Resources\realvista_mobile_certificate_management_16.png" />
+    <None Include="Resources\realvista_mobile_certificate_management_256.png" />
+    <None Include="Resources\supervista_general_book_16.png" />
+    <None Include="Resources\supervista_general_book_256.png" />
+    <None Include="Resources\supervista_medical_patient_information_16.png" />
+    <None Include="Resources\supervista_medical_patient_information_256.png" />
+    <None Include="Resources\supervista_general_stats_16.png" />
+    <None Include="Resources\supervista_general_stats_256.png" />
+    <None Include="Resources\vista_business_meeting_16.png" />
+    <None Include="Resources\vista_business_meeting_256.png" />
+    <None Include="Resources\supervista_security_application_modules_16.png" />
+    <None Include="Resources\supervista_security_application_modules_256.png" />
+    <None Include="Resources\vista_networking_role_16.png" />
+    <None Include="Resources\vista_networking_role_256.png" />
+    <None Include="Resources\vista_communications_skin_16.png" />
+    <None Include="Resources\vista_communications_skin_256.png" />
+    <None Include="Resources\realvista_realestate_drugstore_16.png" />
+    <None Include="Resources\realvista_realestate_drugstore_256.png" />
+    <None Include="Resources\realvista_projectmanagment_task_16.png" />
+    <None Include="Resources\realvista_projectmanagment_task_256.png" />
+    <None Include="Resources\plasticxp_medical_allergy_vials_16.png" />
+    <None Include="Resources\plasticxp_medical_allergy_vials_256.png" />
+    <None Include="Resources\windows7_general_group_16.png" />
+    <None Include="Resources\windows7_general_group_256.png" />
+    <None Include="Resources\realvista_general_binoculars_16.png" />
+    <None Include="Resources\realvista_general_binoculars_256.png" />
+    <None Include="Resources\realvista_general_user_16.png" />
+    <None Include="Resources\realvista_general_user_256.png" />
+    <None Include="Resources\realvista_networking_password_16.png" />
+    <None Include="Resources\realvista_networking_password_256.png" />
+    <None Include="Resources\realvista_networking_login_16.png" />
+    <None Include="Resources\realvista_networking_login_256.png" />
+    <None Include="Resources\realvista_general_help_16.png" />
+    <None Include="Resources\realvista_general_help_256.png" />
+    <None Include="Resources\realvista_projectmanagment_project_schedule_16.png" />
+    <None Include="Resources\realvista_projectmanagment_project_schedule_256.png" />
+    <None Include="Resources\supervista_business_benchmarking_16.png" />
+    <None Include="Resources\supervista_business_benchmarking_256.png" />
+    <None Include="Resources\vista_medical_laboratory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

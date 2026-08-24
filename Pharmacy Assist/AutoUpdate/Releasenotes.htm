@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Release Notes</title>
+    <style type="text/css">
+
+li
+{
+    font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div style="font-family:Calibri,Verdana,Arial">
+        18 March 2014<br />
+        Version 1.3.16.0<br />
+        <br />
+        Bugfix:  MyTasks sometimes did not show a Next Date, forcing recurring tasks to be completed and not re-occur<br />
+        <hr />
+        29 January 2014<br />
+        Version 1.3.15.0<br />
+        <br />
+        Bugfix:  Ingredient search was not returning the correct results<br />
+        <hr />
+        16 December 2013<br />
+        Version 1.3.14.0<br />
+        <br />
+        Bugfix:  (Linked Products) Linking between Ingredient and Product was not displaying correctly<br />
+        <hr />
+        16 December 2013<br />
+        Version 1.3.13.0<br />
+        <br />
+        Administrative Version change<br />
+        <hr />
+        11 December 2013<br />
+        Version 1.3.12.0<br />
+        <br />
+        Feature: (Options) Added option to control how My Tasks are sorted<br />
+        Feature: (My Tasks) My Tasks are now sorted by Date or Name<br />
+        Feature: (Logon) Remember Me option temporarily removed<br />
+        Bugfix:  (Documents) All Documents are now downloaded every time<br />
+        <hr />
+        11 November 2013<br />
+        Version 1.3.11.0<br />
+        <br />
+        Feature: (Options) Added option to control how Task Data is to be loaded<br />
+        Feature: (Tasks) Tasks may be loaded much faster (on slow links) by enabling Load Task Data on Demand (default)<br />
+        <hr />
+        29 October 2013<br />
+        Version 1.3.10.0<br />
+        <br />
+        Feature: (Options) Added End Use name<br />
+        Feature: (Search) Added End Use name<br />
+        <hr />
+        17 October 2013<br />
+        Version 1.3.9.0<br />
+        <br />
+        Feature:  (Documents) Added ability to delete Documents (from database only).<br />
+        Bugfix:   (Tasks) When viewing an existing recurrence, the GUI was not showing the correct details.<br />
+        Bugfix:   (Tasks) When copying an existing Task, the Due Date was not correctly set.<br />
+        <hr />
+        16 October 2013<br />
+        Version 1.3.8.0<br />
+        <br />
+        Feature:  (Documents) Added Free Service property to all documents.<br />
+        Feature:  (Documents) Added support to load appropriate filetype images.<br />
+        Feature:  (Product Search) Added ability to reorder product list by clicking on Column header.<br />
+        Change:   (Documents) Listed documents now come from the Database only, until it is decided to manage them.<br />
+        Change:   (Documents) Document info now only shows incomplete Tasks.<br />
+        Change:   (Document Info) Applied User Account permissions.<br />
+        Bugfix:   (Tasks) Creating a Task without a Store caused an error.<br />
+        Bugfix:   (Tasks) Creating a Task without assigning a store, meant the Task saved with the previously selected Store.<br />
+        Bugfix:   (Tasks) Clicking on a Task and then immediately clicking Save caused an error.<br />
+        Bugfix:   (Tasks) Fixed an issue where copying a Task would cause an error.<br />
+        Bugfix:   (My Tasks) Fixed an issue where the Calendar days to show is outside the maximum allowable.<br />
+        <hr />
+        23 September 2013<br />
+        Version 1.3.7.1<br />
+        <br />
+        Change:   (Documents) Prevented loading associated Condition information, thus making load time much shorter.<br />
+        <hr />
+        20 September 2013<br />
+        Version 1.3.7.0<br />
+        <br />
+        Change:   (Documents) Widened form and folder.<br />
+        Change:   (Tasks) Widened form and folder.<br />
+        Change:   (Tasks) Task Stores is now Store.<br />
+        Change:   (Tasks) A Task can now only be assigned to a single Store.<br />
+        Change:   (Tasks) Screen is now sizeable.<br />
+        Change:   (My Tasks) Screen is now sizeable.<br />
+        Change:   (Tasks) Screen rearranged to provide more space for Description.<br />
+        Change:   (My Tasks) Widened form and folder.<br />
+        Change:   (My Tasks) Current - Added Due Date column to listview.<br />
+        Feature:  (Tasks) Tasks are now always ordered by Due Date.<br />
+        Feature:  (Tasks) Tasks are now always shown colour-coded (Red/Green/White) according to Due Date.<br />
+        Feature:  (Options) You can now opt to show the Store Name when viewing Tasks.<br />
+        Feature:  (My Tasks) Added Double-click to Documents list to open the document.<br />
+        Feature:  (My Tasks) Default view of Current Tasks is now a Calendar view.<br />
+        Bugfix:   (Tasks) Opening Documents for a Task did not show already selected Documents.<br />
+        Bugfix:   (Tasks) Opening Stores for a Task did not show already selected Stores.<br />
+        Bugfix:   (Tasks) Opening Roles for a Task did not show already selected Roles.<br />
+        Bugfix:   (Tasks) Opening Certificates for a Task did not show already selected Certificates.<br />
+        <hr />
+        13 September 2013<br />
+        Version 1.3.6.0<br />
+        <br />
+        Change:  (Application) Changed name to Pharmacy Assist.<br />
+        <hr />
+        11 September 2013<br />
+        Version 1.3.5.0<br />
+        <br />
+        Feature:  (Options) Added "Show Completed Tasks" option.<br />
+        Feature:  (Tasks) Added "Show Completed Tasks" checkbox (linked with Option).<br />
+        Feature:  (My Tasks) Added History.<br />
+        Feature:  (My Tasks) Prevent User from completing Tasks before Task is Due.<br />
+        Change:   (Tasks) Removed Mandatory checkbox.<br />
+        Change:   (Documents) Removed Delete Folder and Delete Document options.<br />
+        Change:   (My Tasks) Removed Calendar.<br />
+        Change:   (Options) Changed Calendar (weeks) to Task List (Days).<br />
+        Change:   (My Tasks) Increased window width to allow more Task details to be displayed.<br />
+        Change:   (My Tasks) Increased Database table field size for Task Description from 255 to MAX characters.<br />
+        Bugfix:   (My Tasks) Recurring tasks that should expire now do so.<br />
+        Bugfix:   (Documents) Attempting to open a document without a database entry was causing an exception.<br />
+        Bugfix:   (Tasks) Copying a Task that was not recurring created an exception.<br />
+        Bugfix:   (Recurring Dates) Tasks set to recur daily must now set at least one day.<br />
+        Bugfix:   (Various) Fixed problem where Items (Conditions/Ingredients etc) could not be created.<br />
+        <hr />
+        10 September 2013<br />
+        Version 1.3.4.1<br />
+        <br />
+        Change:  (Documents) Added ability to navigate sub-folders.<br />
+        Change:  (Documents) Streamlined folder selection to speed-up access.<br />
+        Change:  (Application) House-keeping tasks to reduce setup size.<br />
+        <hr />
+        09 September 2013<br />
+        Version 1.3.4.0<br />
+        <br />
+        Bugfix:  (Documents) Various.<br />
+        <hr />
+        09 September 2013<br />
+        Version 1.3.3.2<br />
+        <br />
+        Change:  (Tasks) New Tasks are now Enabled and Mandatory by default.<br />
+        Bugfix:  (Documents) Various.<br />
+        Bugfix:  (User Accounts) Multiple User Accounts could not be created without closing Form between attempts.<br />
+        Bugfix:  (My Tasks) Fixed an issue where a new User didn't see all Tasks assigned to them.<br />
+        <hr />
+        09 September 2013<br />
+        Version 1.3.3.2<br />
+        <br />
+        Bugfix:  (Documents) Various.<br />
+        <hr />
+        05 September 2013<br />
+        Version 1.3.3.1<br />
+        <br />
+        Bugfix:  (Documents) Fixed problem where Document creation was sometimes incorrect.<br />
+        <hr />
+        05 September 2013<br />
+        Version 1.3.3.0<br />
+        <br />
+        Feature: (Application) Added Tasks.<br />
+        Feature: (Options) Added Task notification period.<br />
+        Feature: (Options) Added Calendar view period.<br />
+        Feature: (User Accounts) Added Password and Confirm Password textboxes.<br />
+        Feature: (Application) Added Write Password Permission.  Users must have this permission to set their own password.<br />
+        Feature: (Application) Added minimize button to Main Window whilst in Toolbar mode.<br />
+        Feature: (Application) Added option to allow users to control if Window is top most in Toolbar mode.<br />
+        Feature: (Application) Users prevented from opening list of items unless they have Read [Item] Permission.<br />
+        Feature: (Application) Users prevented from opening search unless they have Read Product Permission.<br />
+        Change:  (ListEdit) Linked Items button now shows an image representing the Linked item type.<br />
+        Change:  (Application) Documents separated into own screen.<br />
+        Bugfix:  (ListEdit) Fixed problem where Document/Condition linking was incorrect.<br />
+        <hr />
+        28 August 2013<br />
+        Version 1.3.2.0<br />
+        <br />
+        Bugfix: (Manage Linked Items) Fixed problem where Users could not modify selected items<br />
+        <hr />
+        26 August 2013<br />
+        Version 1.3.1.1<br />
+        <br />
+        Bugfix: (Manage Linked Items) Fixed problem where Users could not modify Role Permissions<br />
+        <hr />
+        26 August 2013<br />
+        Version 1.3.1.0<br />
+        <br />
+        Feature: (Manage Linked Items) Added double-click to remove items<br />
+        Feature: (Options) Added ability to reset default settings<br />
+        Feature: (Options) Added colour theme selection Window<br />
+        Feature: (Application) Added Toolbar Interface option<br />
+        Feature: (Logon) Logon initiated on CR<br />
+        Change:  (Application) Added Username to Logoff menu<br />
+        Change:  (Application) Toolbar is now the default application mode<br />
+        Bugfix:  (Search) Search initiated on CR<br />
+        <hr />
+        19 August 2013<br />
+        Version 1.3.0.0<br />
+        <br />
+        Feature: (Application) Added Catalogs<br />
+        Feature: (Application) Added Permissions<br />
+        Feature: (Application) Added User Account Roles<br />
+        Feature: (Application) Added Option to control automatic item counts<br />
+        Feature: (Application) Added Theme colours<br />
+        Feature: (Application) Added Theme colour for each item type (Product, Event etc)<br />
+        Feature: (Application) Added Form image for each item type (Product, Event etc)<br />
+        Feature: (Application) Added Multi-Document interface (MDI) option<br />
+        Feature: (Application) Added Multiple search ability<br />
+        Feature: (Application) Added User Accounts<br />
+        Feature: (Application) Added Events<br />
+        Feature: (Application) Assign Stores to Events<br />
+        Feature: (Application) Assign Owner to Events<br />
+        Feature: (Application) Assign Presenter to Events<br />
+        Feature: (Application) Assign Documents to Events<br />
+        Feature: (Application) Assign Type to Events<br />
+        Feature: (Application) Assign Certificate to Events<br />
+        Feature: (Application) Assign Store to User Account<br />
+        Feature: (Application) Assign Manager to User Account<br />
+        Feature: (Application) Assign Start page to User Account<br />
+        Feature: (Application) Allow users to set own start page<br />
+        Feature: (Application) Defined start page opens at app start<br />
+        Feature: (Search) Added user-definable Search Page size <br />
+        Feature: (LinkedItems) Added item count<br />
+        Change:  (Application) Menu buttons are now displayed 32x32 (instead of 16x16)<br />
+        Change:  (Application) Moved options to dedicated Options page<br />
+        Change:  (Application) MDI is now the default application mode<br />
+        Change:  (Application) Users must logon to use the product<br />
+        Change:  (Application) Final product name selected<br />
+        Change:  (Product Details) Set auditing to list info newest to oldest<br />
+        Change:  (Product Details) Disabled Select Condition button when linking Condition to Ingredient only<br />
+        Change:  (Application) All database changes can now be audited<br />
+        Change:  (ListEdit) Adding new item now selects first field automatically<br />
+        Bugfix:  (Search) Duplicates removed from Search results<br />
+        Bugfix:  (ListEdit) Adding new item now clears previous info<br />
+        <hr />
+        19 July 2013<br />
+        Version 1.2.0.0<br />
+        <br />
+        Feature: (Application) Document management added<br />
+        Feature: (Main form) Auto Search function added<br />
+        Bugfix:  (List Edit) Linked Items label anchored incorrectly<br />
+        <hr />
+        19 July 2013<br />
+        Version 1.1.0.0<br />
+        <br />
+        Feature: (Application) AutoUpdate added<br />
+        Feature: (Application) Preview of Document management added<br />
+        Feature: (Application) Added ability to switch to developer database<br />
+        Feature: (Application) Dev database conn. automatically chosen for dev.<br />
+        Feature: (Application) Added toolstrip buttons for Edit menu items<br />
+        Feature: (Linked Items) Added ability to double-click an item to open it<br />
+        Feature: (List Edit) Added Linked products button<br />
+        Change:  (List Edit) Moved Refresh button (standardised it's location)<br />
+        Change:  (List Edit) Modified duplicate item notification text<br />
+        Change:  (Linked Items) Moved Refresh button (standardised it's location)<br />
+        Change:  (Manage Linked Items) Modified instructional text<br />
+        Change:  (Main form) Set grid colors to other than standard<br />
+        Bugfix:  (Main form) Fixed paging problems<br />
+        <hr />
+        17 July 2013<br />
+        Version 1.0.2.0<br />
+        <br />
+        Bugfix: ProductDetails form did not allow saving of CoreProduct field<br />
+        <hr />
+        17 July 2013<br />
+        Version 1.0.1.0<br />
+        <br />
+        Bugfix: ListEdit form did not allow apostrophe's in names<br />
+        <hr />
+        16 July 2013<br />
+        Version 1.0.0.0<br />
+        <br />
+        Initial release<br />
+        <hr />
+    </div>
+</body>
+</html>

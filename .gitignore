@@ -1,0 +1,52 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Legacy source-control bindings
+*.scc
+*.vssscc
+*.vspscc
+
+# NuGet
+packages/
+
+
+# Secrets / credentials (never upload)
+*.pfx
+*.p12
+*.pem
+*.key
+.env
+**/appsettings.*.local.json
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# InstallShield built payloads (configs inside DiskImages hold secrets)
+**/DiskImages/
+**/LogFiles/
+**/Reports/
+
+# VS user/solution options
+*.suo
+*.user
+
+# Redacted originals (see *.example files)
+Pharmacy Assist/app.config
+Pharmacy Assist/Properties/Settings.Designer.cs
+Pharmacy Assist/Properties/Settings.settings
+RPM Import/app.config
+RPM Import/Properties/Settings.Designer.cs
+RPM Import/Properties/Settings.settings
+Pharmacy Docs/Properties/Settings.Designer.cs
+Pharmacy Docs/Properties/Settings.settings
+EFModel/App.Config
+DataExport/frmMain.Designer.cs

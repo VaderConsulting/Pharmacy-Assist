@@ -1,0 +1,14 @@
+﻿Original query:
+
+SELECT DISTINCT 
+    pp.ProductID, 
+    CAST(ISNULL(pp.Retail,0) AS float) / 100 AS Price, 
+	ISNULL(p.CosmosUPI,0) AS UPI, 
+	ISNULL(p.Description,'') AS Name, 
+	CAST(ISNULL(p.Deleted,0) AS bit) As Deleted 
+FROM Product p 
+	INNER JOIN [Product].[PricingCurrent] pp ON p.ProductID = pp.ProductID 
+	LEFT JOIN StoreProducts s ON s.ProductID = p.ProductID 
+WHERE pp.zoneid = 17 AND (s.SOH >0 OR s.SOO >0 OR datediff(day,cast(lastsold as date), getdate()) < 365)
+ORDER BY ProductID
+

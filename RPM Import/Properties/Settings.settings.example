@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RPM_Import.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RPMConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=headoffice\corumhs;Initial Catalog=RPM;User ID=REDACTED;Password=REDACTED;</Value>
+    </Setting>
+    <Setting Name="DevRPMConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=t3400-8;Initial Catalog=RPM;User ID=REDACTED;Password=REDACTED;</Value>
+    </Setting>
+    <Setting Name="DestinationPAConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=tcp:sql2k1201.discountasp.net;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;</Value>
+    </Setting>
+    <Setting Name="DestinationPADevConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=vaderconsulting\sqlexpress;Initial Catalog=SQL2012_925925_savemor;User ID=REDACTED;Password=REDACTED;</Value>
+    </Setting>
+    <Setting Name="ProductImportQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SELECT DISTINCT Product.ProductID AS ProductID,
+                CAST(Product.PricingCurrent.Retail AS FLOAT) / 100 AS Price, 
+                CASE 
+                   WHEN ISNULL(ProductHierarchy.ProductValues.RRP, 0) = 0 THEN CAST(WholesalerProduct.RecRetail AS FLOAT)/ 100 
+                   ELSE CAST(ISNULL(ProductHierarchy.ProductValues.RRP, 0) AS FLOAT) / 100 
+                   END 
+               AS RecommendedPrice, 
+               Product.CosmosUPI AS UPI, 
+               Product.Description AS Name, 
+               Product.Deleted
+FROM           Product 
+               INNER JOIN ProductHierarchy.ProductValues ON Product.ProductID = ProductHierarchy.ProductValues.ProductID 
+               INNER JOIN Product.PricingCurrent ON ProductHierarchy.ProductValues.ProductID = Product.PricingCurrent.ProductID AND ProductHierarchy.ProductValues.ZoneID = Product.PricingCurrent.ZoneID 
+               INNER JOIN StoreProducts ON Product.ProductID = StoreProducts.ProductID 
+               RIGHT OUTER JOIN WholesalerProduct ON Product.CosmosUPI = WholesalerProduct.CosmosUPI AND ProductHierarchy.ProductValues.RRPSupplierID = WholesalerProduct.SupplierID
+WHERE          (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (StoreProducts.SOH &gt; 0) AND (ProductHierarchy.ProductValues.ZoneID = 0) OR
+               (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (StoreProducts.SOO &gt; 0) AND (ProductHierarchy.ProductValues.ZoneID = 0) OR
+               (ProductHierarchy.ProductValues.RRPSupplierID IS NOT NULL) AND (DATEDIFF(day, CAST(StoreProducts.LastSold AS date), GETDATE()) &lt; 365) AND (ProductHierarchy.ProductValues.ZoneID = 0)               
+ORDER BY UPI</Value>
+    </Setting>
+    <Setting Name="ExistingProductSelectQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SELECT ID, UPI, Price, RecommendedPrice FROM Product</Value>
+    </Setting>
+    <Setting Name="LastCatalogueQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SELECT TOP 1 AutoSpecialsID AS ID, AutoSpecialsName AS Name FROM AutoSpecials ORDER BY AutoSpecialsID DESC</Value>
+    </Setting>
+    <Setting Name="LastKnownCatalogueQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SELECT TOP 1 ID, RPMID, Name FROM Catalog ORDER BY RPMID DESC</Value>
+    </Setting>
+    <Setting Name="SetCheckedQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Update Product SET Checked = 0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

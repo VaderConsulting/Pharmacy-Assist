@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup/>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Common\Common.vbproj">
+			<Name>Common</Name>
+			<Project>{1ADA0AF0-7AB5-4422-B254-251A960A9B28}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Core\Compression\Compression.vbproj">
+			<Name>Compression</Name>
+			<Project>{9D0F3ECF-AF2E-4A59-9834-0E83D3E272D8}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Zeta HTML Edit Control\Control\Control.csproj">
+			<Name>Control</Name>
+			<Project>{B00AE765-8212-43FD-8E70-768A6C20EE93}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Core\FileTransfer\FileTransfer.vbproj">
+			<Name>FileTransfer</Name>
+			<Project>{30A6157B-92EB-4FA5-8521-6F00255903BE}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Linqkit\LinqKit.csproj">
+			<Name>LinqKit</Name>
+			<Project>{AEC98F52-83F5-488D-99EF-8AFFE7C9F6E6}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Core\Logging\Logging.vbproj">
+			<Name>Logging</Name>
+			<Project>{B456B610-7C31-4B25-B875-4FBA4C34ECDF}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Model\Model.csproj">
+			<Name>Model</Name>
+			<Project>{7A515B50-FA79-4770-A2B6-F3C5FABAC15D}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Pharmacy Assist\Pharmacy Assist.csproj">
+			<Name>Pharmacy Assist</Name>
+			<Project>{0446B300-4663-4E6E-B205-F78085E5D908}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\RecurranceGenerator\RecurrenceGenerator\RecurrenceGenerator.csproj">
+			<Name>RecurrenceGenerator</Name>
+			<Project>{CB580CB9-6597-4EDB-AA6C-B44F5AED87CE}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\Core\SQL\SQL.vbproj">
+			<Name>SQL</Name>
+			<Project>{D8187EA2-CE6F-4EC6-9CA7-74A3FA2129E9}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj">
+			<Name>System.Windows.Forms.Calendar</Name>
+			<Project>{25649F08-3046-4891-ADB8-7EA787B57063}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\i00SpellCheck\Components\i00BindingList\i00BindingList.vbproj">
+			<Name>i00BindingList</Name>
+			<Project>{1A3066D9-B48C-4EC1-AC93-4B0BBE5AA812}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\i00SpellCheck\i00SpellCheck\i00SpellCheck.vbproj">
+			<Name>i00SpellCheck</Name>
+			<Project>{27D0D9B3-719C-46B7-9F03-3F91E82E7436}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

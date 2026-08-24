@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86900959de9c45cb874ce1e959a6ab16" Name="Diagram1">
+        <EntityTypeShape EntityType="PharmacyAssist.Audit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PharmacyAssist.Brand" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PharmacyAssist.Calendar" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="PharmacyAssist.Catalog" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PharmacyAssist.Category" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="PharmacyAssist.Certificate" Width="1.5" PointX="6.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Condition" Width="1.5" PointX="4.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ConditionDocument" Width="1.5" PointX="9.375" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ConditionIngredient" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Document" Width="1.5" PointX="4.875" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EndUse" Width="1.5" PointX="10.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Event" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventCertificate" Width="1.5" PointX="2.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventCondition" Width="1.5" PointX="2.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventDocument" Width="1.5" PointX="2.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventPermission" Width="1.5" PointX="2.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventStore" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventTask" Width="1.5" PointX="2.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.EventType" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Ingredient" Width="1.5" PointX="11.125" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Page" Width="1.5" PointX="9.375" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Permission" Width="1.5" PointX="4.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Product" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ProductCatalog" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ProductCategory" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ProductCondition" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ProductEndUse" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.ProductIngredient" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Role" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.RolePermission" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Schedule" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Shelftalker" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.StockLevel" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Store" Width="1.5" PointX="6.625" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.SystemSetting" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Task" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.TaskDocument" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.TaskRole" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.TaskStore" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.TaskUserAccount" Width="1.5" PointX="2.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.Trace" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.UnitOfMeasure" Width="1.5" PointX="16.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.UserAccount" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PharmacyAssist.UserAccountRole" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
