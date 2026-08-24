@@ -1,21 +1,21 @@
 # Pharmacy Assist
 
-This is a Visual Studio 2012 C# Windows Forms suite that manages Savemor pharmacy website and product data. The main Pharmacy Assist exe (assembly 1.3.16.0, .NET 3.5) logs on against SQL Server, then edits catalogs, products, documents, events, tasks, and recurrences, and can publish files over FTP. Helper WinExe projects export SQL tables (DataExport), import RPM pricing, browse document trees, and check recurrence strings. Open `Pharmacy Assist.sln` in Visual Studio 2012. This is a historical working copy from Dave Robinson / VaderConsulting.
+Manages all Pharmacy website and Product data. The C# WinForms suite edits catalogs, products, documents, events, tasks, and recurrences, and can publish files over FTP. Companion projects export SQL tables, import RPM/Corum pricing, browse the document tree, and check recurrence strings. Calendar views include code from Jose Menendez Póo (CodeProject).
 
 **Source last updated:** 2014-06-09  
 **Language:** C#  
-**Target:** .NET 3.5 (main, Model, EFModel, Pharmacy Docs, RPM Import); .NET 4.0 (DataExport, Recurrance Checker)  
-**Output:** WinForms exe, class libraries, InstallShield setups
+**Target:** .NET 3.5 (main WinForms exe, Model, EFModel, Pharmacy Docs, RPM Import); .NET 4.0 (DataExport, Recurrance Checker)  
+**Output:** WinForms exe
 
 ## Solution structure
 
 | Project | Language | Type | Purpose |
 |---------|----------|------|---------|
-| `Pharmacy Assist` | C# | WinForms exe (.NET 3.5) | Main Savemor product/website manager (logon, catalogs, documents, events, tasks, FTP) |
+| `Pharmacy Assist` | C# | WinForms exe (.NET 3.5) | Main pharmacy website and product manager (logon, catalogs, documents, events, tasks, FTP) |
 | `Model` | C# | class library (.NET 3.5) | Domain types (Product, Store, Document, Task, Role, Condition) |
 | `EFModel` | C# | class library (.NET 3.5) | Entity Framework PAModel EDMX against SQL Server |
-| `Pharmacy Docs` | C# | WinForms exe (.NET 3.5) | Document-tree browser over the same SQL/FTP settings |
-| `RPM Import` | C# | WinForms exe (.NET 3.5) | Import RPM/Corum pricing and catalogues into Pharmacy Assist SQL |
+| `Pharmacy Docs` | C# | WinForms exe (.NET 3.5) | Document-tree browser over the same SQL/FTP settings (in-tree; not listed in the sln) |
+| `RPM Import` | C# | WinForms exe (.NET 3.5) | Import RPM data into the Pharmacy Assist database |
 | `DataExport` | C# | WinForms exe (.NET 4.0) | Dump SQL Server tables to files |
 | `Recurrance Checker` | C# | WinForms exe (.NET 4.0) | Decode recurrence strings via RecurrenceGenerator |
 | `Pharmacy Assist Setup` | InstallShield | setup | Installer for Pharmacy Assist |
@@ -23,12 +23,12 @@ This is a Visual Studio 2012 C# Windows Forms suite that manages Savemor pharmac
 
 ## How to open
 
-Open `Pharmacy Assist.sln` in Visual Studio 2012. The solution also references sibling Historical Dev projects that are not in this folder (`Core`, `i00SpellCheck`, `Linqkit`, `File Association`, `System.Windows.Forms.Calendar`, `RecurranceGenerator`, `Zeta HTML Edit Control`). Connection strings and FTP defaults are gitignored; copy the matching `*.example` files.
+Open `Pharmacy Assist.sln` in Visual Studio (VS 2013 solution). The sln also references sibling Historical Dev folders via `..\` that are other repos, not this tree: `Zeta HTML Edit Control`, `i00SpellCheck`, `Linqkit`, `Core`, `System.Windows.Forms.Calendar`, `RecurranceGenerator`, and `File Association`. Connection strings, FTP defaults, and the DataExport designer login fields are gitignored; copy the matching `*.example` files.
 
 ## Attribution and provenance
 
-From Dave Robinson's Historical Dev archive (OneDrive folder `Pharmacy Assist`). Assembly company Vader Consulting; assembly copyright 2014 Vader Consulting; assembly description notes calendar code from Jose Menendez Póo (CodeProject). NuGet packages (Entity Framework 5, jQuery UI 1.10.3, Microsoft.Data.OData) lived under `packages/` and are not committed.
+Dave Robinson / VaderConsulting. Assembly title Pharmacy Assist; assembly company Vader Consulting; assembly copyright 2014 Vader Consulting. Assembly description records calendar code from Jose Menendez Póo (CodeProject, http://www.codeproject.com/Articles/38699/A-Professional-Calendar-Agenda-View-That-You-Will). NuGet packages in `packages/` (including jQuery UI 1.10.3) are gitignored. Source was extracted from a truncated OneDrive zip (central directory cut off; present source imported as-is). See `THIRD_PARTY_NOTICES.md`.
 
 ## License
 
-MIT License. Copyright (c) 2026 VaderConsulting.
+MIT License. Copyright (c) 2026 VaderConsulting. See `LICENSE`.
