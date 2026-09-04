@@ -25,6 +25,10 @@ Manages all Pharmacy website and Product data. The C# WinForms suite edits catal
 
 Open `Pharmacy Assist.sln` in Visual Studio (VS 2013 solution). The sln also references sibling Historical Dev folders via `..\` that are other repos, not this tree: `Zeta HTML Edit Control`, `i00SpellCheck`, `Linqkit`, `Core`, `System.Windows.Forms.Calendar`, `RecurranceGenerator`, and `File Association`. Connection strings, FTP defaults, and the DataExport designer login fields are gitignored; copy the matching `*.example` files.
 
+## Requirements
+
+- Visual Studio 2013, .NET Framework 3.5, .NET Framework 4.0
+
 ## Attribution and provenance
 
 Dave Robinson / VaderConsulting. Assembly title Pharmacy Assist; assembly company Vader Consulting; assembly copyright 2014 Vader Consulting. Assembly description records calendar code from Jose Menendez Póo (CodeProject, http://www.codeproject.com/Articles/38699/A-Professional-Calendar-Agenda-View-That-You-Will). NuGet packages in `packages/` (including jQuery UI 1.10.3) are gitignored. Source was extracted from a truncated OneDrive zip (central directory cut off; present source imported as-is). See `THIRD_PARTY_NOTICES.md`.
